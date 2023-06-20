@@ -1,0 +1,364 @@
+1_O'STIN:	O'STIN
+1_oodji:	oodji
+1_Zolla:	Zolla
+1_Modis:	Modis
+1_Befree:	Befree
+1_TVOE:	ТВОЕ
+1_GUESS:	GUESS
+2_Wildberries:	Wildberries
+2_OSTIN_OOO	ОСТИН ООО
+2_oodji:	oodji
+2_Zolla:	Zolla
+2_MELON_FASHION_GROUP	MELON FASHION GROUP
+2_MODIS:	MODIS
+2_OOO_Sportmaster	ООО Спортмастер
+4_Bezhevyy:	Бежевый
+4_Belyy:	Белый
+4_Goluboy:	Голубой
+4_Zheltyy:	Желтый
+4_Zelenyy:	Зеленый
+4_Korichnevyy:	Коричневый
+4_Krasnyy:	Красный
+4_Oranzhevyy:	Оранжевый
+4_Rozovyy:	Розовый
+4_Seryy:	Серый
+4_Siniy:	Синий
+4_Fioletovyy:	Фиолетовый
+4_Chernyy:	Черный
+5_1:	1
+5_3:	3
+5_30:	30
+5_31:	31
+5_32:	32
+5_34:	34
+5_35:	35
+5_36:	36
+5_37:	37
+5_38:	38
+5_39:	39
+5_40:	40
+5_41:	41
+5_42:	42
+5_43:	43
+5_44:	44
+5_45:	45
+5_46:	46
+5_47:	47
+5_48:	48
+5_49:	49
+5_50:	50
+5_51:	51
+5_52:	52
+5_53:	53
+5_54:	54
+5_55:	55
+5_56:	56
+5_57:	57
+5_58:	58
+5_59:	59
+5_60:	60
+5_61:	61
+5_62:	62
+5_63:	63
+5_64:	64
+5_65:	65
+5_66:	66
+5_67:	67
+5_68:	68
+5_69:	69
+5_70:	70
+5_71:	71
+5_72:	72
+5_73:	73
+5_74:	74
+5_75:	75
+5_76:	76
+5_77:	77
+5_78:	78
+5_79:	79
+5_80:	80
+5_81:	81
+5_82:	82
+5_83:	83
+5_84:	84
+5_85:	85
+5_86:	86
+5_87:	87
+5_88:	88
+5_89:	89
+5_90:	90
+5_91:	91
+5_92:	92
+5_93:	93
+5_94:	94
+5_95:	95
+5_96:	96
+5_97:	97
+5_98:	98
+5_104:	104
+5_110:	110
+5_116:	116
+5_122:	122
+5_128:	128
+6_akril:	акрил
+6_bayka:	байка
+6_bambuk:	бамбук
+6_vel0vet:	вельвет
+6_viskoza:	вискоза
+6_laykra:	лайкра
+6_len:	лен
+6_liotsell:	лиоцелл
+6_neylon:	нейлон
+6_poliamid:	полиамид
+6_poliuretan:	полиуретан
+6_poliester:	полиэстер
+6_poliefir:	полиэфир
+6_spandeks:	спандекс
+6_tekstil0:	текстиль
+6_flanel0:	фланель
+6_flis:	флис
+6_khlopok:	хлопок
+6_sherst0:	шерсть
+6_shtapel0:	штапель
+6_elastan:	эластан
+7_bez_karmanov	без карманов
+7_v_shve	в шве
+7_kenguru:	кенгуру
+7_nakladnye:	накладные
+7_potaynye:	потайные
+7_proreznye:	прорезные
+7_s_klapanom	с клапаном
+8_bol0shie_razmery	большие размеры
+8_vechernyaya_moda	вечерняя мода
+8_vypusknoy:	выпускной
+8_dlya_kreshcheniya	для крещения
+8_domashnyaya_odezhda	домашняя одежда
+8_na_vypisku	на выписку
+8_novyy_god	новый год
+8_ofis:	офис
+8_plyazh:	пляж
+8_povsednevnaya:	повседневная
+8_svad0ba:	свадьба
+8_sport:	спорт
+8_shkola:	школа
+9_bez_zastezhki	без застежки
+9_zavyazki:	завязки
+9_knopki:	кнопки
+9_lipuchka:	липучка
+9_molniya:	молния
+9_pugovitsy:	пуговицы
+9_shnurovka:	шнуровка
+10_gladit0_na_nizkoy_temperature	гладить на низкой температуре
+10_gladit0_pri_t_ne_bolee_100oC	гладить при t не более 100°C
+10_gladit0_pri_t_ne_bolee_110oC	гладить при t не более 110°C
+10_gladit0_pri_t_ne_bolee_130oC	гладить при t не более 130°C
+10_gladit0_pri_t_ne_bolee_150oC	гладить при t не более 150°C
+10_gladit0_pri_t_ne_bolee_90oC	гладить при t не более 90°C
+10_gladit0_pri_t_utyuga_do_200oC	гладить при t утюга до 200°C
+10_gladit0_s_iznanki	гладить с изнанки
+10_delikatnaya_stirka	деликатная стирка
+10_delikatnaya_khimicheskaya_chistka	деликатная химическая чистка
+10_delikatnyy_otzhim	деликатный отжим
+10_dopuskaetsya_otparivanie	допускается отпаривание
+10_otbelivanie_zapreshcheno	отбеливание запрещено
+10_otzhim_zapreshchen	отжим запрещен
+10_ruchnaya_stirka	ручная стирка
+10_stirat0_iznankoy_naruzhu	стирать изнанкой наружу
+10_stirka_pri_t_ne_bolee_30oC	стирка при t не более 30°C
+10_stirka_pri_t_ne_bolee_40oC	стирка при t не более 40°C
+10_stirka_pri_t_ne_bolee_50oC	стирка при t не более 50°C
+10_stirka_pri_t_ne_bolee_60S	стирка при t не более 60С
+10_sukhaya_chistka	сухая чистка
+10_sushka_v_vertikal0nom_polozhenii	сушка в вертикальном положении
+10_sushka_v_gorizontal0nom_polozhenii	сушка в горизонтальном положении
+10_sushka_v_sushil0noy_mashine	сушка в сушильной машине
+10_khimicheskaya_chistka	химическая чистка
+10_khimicheskaya_chistka_zapreshchena	химическая чистка запрещена
+1_O'STIN	O'STIN
+1_oodji	oodji
+1_Zolla	Zolla
+1_Modis	Modis
+1_Befree	Befree
+1_TVOE	ТВОЕ
+1_GUESS	GUESS
+2_Wildberries	Wildberries
+2_OSTIN_OOO	ОСТИН ООО
+2_oodji	oodji
+2_Zolla	Zolla
+2_MELON_FASHION_GROUP	MELON FASHION GROUP
+2_MODIS	MODIS
+2_OOO_Sportmaster	ООО Спортмастер
+4_Bezhevyy	Бежевый
+4_Belyy	Белый
+4_Goluboy	Голубой
+4_Zheltyy	Желтый
+4_Zelenyy	Зеленый
+4_Korichnevyy	Коричневый
+4_Krasnyy	Красный
+4_Oranzhevyy	Оранжевый
+4_Rozovyy	Розовый
+4_Seryy	Серый
+4_Siniy	Синий
+4_Fioletovyy	Фиолетовый
+4_Chernyy	Черный
+5_1	1
+5_3	3
+5_30	30
+5_31	31
+5_32	32
+5_34	34
+5_35	35
+5_36	36
+5_37	37
+5_38	38
+5_39	39
+5_40	40
+5_41	41
+5_42	42
+5_43	43
+5_44	44
+5_45	45
+5_46	46
+5_47	47
+5_48	48
+5_49	49
+5_50	50
+5_51	51
+5_52	52
+5_53	53
+5_54	54
+5_55	55
+5_56	56
+5_57	57
+5_58	58
+5_59	59
+5_60	60
+5_61	61
+5_62	62
+5_63	63
+5_64	64
+5_65	65
+5_66	66
+5_67	67
+5_68	68
+5_69	69
+5_70	70
+5_71	71
+5_72	72
+5_73	73
+5_74	74
+5_75	75
+5_76	76
+5_77	77
+5_78	78
+5_79	79
+5_80	80
+5_81	81
+5_82	82
+5_83	83
+5_84	84
+5_85	85
+5_86	86
+5_87	87
+5_88	88
+5_89	89
+5_90	90
+5_91	91
+5_92	92
+5_93	93
+5_94	94
+5_95	95
+5_96	96
+5_97	97
+5_98	98
+5_104	104
+5_110	110
+5_116	116
+5_122	122
+5_128	128
+6_akril	акрил
+6_bayka	байка
+6_bambuk	бамбук
+6_vel0vet	вельвет
+6_viskoza	вискоза
+6_laykra	лайкра
+6_len	лен
+6_liotsell	лиоцелл
+6_neylon	нейлон
+6_poliamid	полиамид
+6_poliuretan	полиуретан
+6_poliester	полиэстер
+6_poliefir	полиэфир
+6_spandeks	спандекс
+6_tekstil0	текстиль
+6_flanel0	фланель
+6_flis	флис
+6_khlopok	хлопок
+6_sherst0	шерсть
+6_shtapel0	штапель
+6_elastan	эластан
+7_bez_karmanov	без карманов
+7_v_shve	в шве
+7_kenguru	кенгуру
+7_nakladnye	накладные
+7_potaynye	потайные
+7_proreznye	прорезные
+7_s_klapanom	с клапаном
+8_bol0shie_razmery	большие размеры
+8_vechernyaya_moda	вечерняя мода
+8_vypusknoy	выпускной
+8_dlya_kreshcheniya	для крещения
+8_domashnyaya_odezhda	домашняя одежда
+8_na_vypisku	на выписку
+8_novyy_god	новый год
+8_ofis	офис
+8_plyazh	пляж
+8_povsednevnaya	повседневная
+8_svad0ba	свадьба
+8_sport	спорт
+8_shkola	школа
+9_bez_zastezhki	без застежки
+9_zavyazki	завязки
+9_knopki	кнопки
+9_lipuchka	липучка
+9_molniya	молния
+9_pugovitsy	пуговицы
+9_shnurovka	шнуровка
+10_gladit0_na_nizkoy_temperature	гладить на низкой температуре
+10_gladit0_pri_t_ne_bolee_100oC	гладить при t не более 100°C
+10_gladit0_pri_t_ne_bolee_110oC	гладить при t не более 110°C
+10_gladit0_pri_t_ne_bolee_130oC	гладить при t не более 130°C
+10_gladit0_pri_t_ne_bolee_150oC	гладить при t не более 150°C
+10_gladit0_pri_t_ne_bolee_90oC	гладить при t не более 90°C
+10_gladit0_pri_t_utyuga_do_200oC	гладить при t утюга до 200°C
+10_gladit0_s_iznanki	гладить с изнанки
+10_delikatnaya_stirka	деликатная стирка
+10_delikatnaya_khimicheskaya_chistka	деликатная химическая чистка
+10_delikatnyy_otzhim	деликатный отжим
+10_dopuskaetsya_otparivanie	допускается отпаривание
+10_otbelivanie_zapreshcheno	отбеливание запрещено
+10_otzhim_zapreshchen	отжим запрещен
+10_ruchnaya_stirka	ручная стирка
+10_stirat0_iznankoy_naruzhu	стирать изнанкой наружу
+10_stirka_pri_t_ne_bolee_30oC	стирка при t не более 30°C
+10_stirka_pri_t_ne_bolee_40oC	стирка при t не более 40°C
+10_stirka_pri_t_ne_bolee_50oC	стирка при t не более 50°C
+10_stirka_pri_t_ne_bolee_60S	стирка при t не более 60С
+10_sukhaya_chistka	сухая чистка
+10_sushka_v_vertikal0nom_polozhenii	сушка в вертикальном положении
+10_sushka_v_gorizontal0nom_polozhenii	сушка в горизонтальном положении
+10_sushka_v_sushil0noy_mashine	сушка в сушильной машине
+10_khimicheskaya_chistka	химическая чистка
+10_khimicheskaya_chistka_zapreshchena	химическая чистка запрещена
+1_Srok dostavki	1_Срок доставки
+Lyuboy	Любой
+1 den0	1 день
+2 dnya	2 дня
+do 3 dney	до 3 дней
+do 5 dney	до 5 дней
+4_Skidka	4_Скидка
+Lyubaya	Любая
+ot 10% i vyshe	от 10% и выше
+ot 30% i vyshe	от 30% и выше
+ot 50% i vyshe	от 50% и выше
+ot 70% i vyshe	от 70% и выше
