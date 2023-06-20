@@ -32,7 +32,6 @@ with open("pairwise.txt", "r") as file:
 #         print(array[0][position], line[position])
 #         position += 1
 
-
 position = 0
 while position < len(array[0]):
     print(array[0][position], array[1][position])

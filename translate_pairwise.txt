@@ -350,7 +350,7 @@
 10_sushka_v_sushil0noy_mashine	сушка в сушильной машине
 10_khimicheskaya_chistka	химическая чистка
 10_khimicheskaya_chistka_zapreshchena	химическая чистка запрещена
-1_Srok dostavki	1_Срок доставки
+1_Srok_dostavki	1_Срок доставки
 Lyuboy	Любой
 1 den0	1 день
 2 dnya	2 дня
