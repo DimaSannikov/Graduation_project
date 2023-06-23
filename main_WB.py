@@ -36,14 +36,13 @@ try:
     # wb.show_all(browser)
     # sleep(t_low)
 
-    # wb.count_goods(browser)
-    # sleep(t_medium)
+    wb.count_goods(browser)
+    sleep(t_medium)
 
-    wb.filters_count(browser)
-    sleep(t_micro)
+    # wb.filters_count(browser)
+    # sleep(t_micro)
 
-# except Exception as ex:
-#     print(f"{ex}\n Test is failure")
+    wb.site_testing(browser)
 
 finally:
     browser.close()

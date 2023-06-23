@@ -53,37 +53,37 @@ def count_goods(browser):
     print(goods.text)
 
 
-def filter_type(filter):
-    elements = filter.find_elements(By.TAG_NAME, "li")
-    element_type = elements[0].find_element(By.TAG_NAME, "span").get_attribute('class').split("-")[0]
-    return element_type
+# def filter_type(filter):
+#     elements = filter.find_elements(By.TAG_NAME, "li")
+#     element_type = elements[0].find_element(By.TAG_NAME, "span").get_attribute('class').split("-")[0]
+#     return element_type
 
 
-def filter_checkbox(browser, num_test):
-    test_sheet = []
-    with open(f"testlists/list_for_test_{num_test}.txt", "r") as file:
-        for link_text in file:
-            link_text = link_text.replace("\n", "").split("\t")
-            if link_text[-1] == "active":
-                checkbox = browser.find_element(By.PARTIAL_LINK_TEXT, f"{link_text}")
-                checkbox.click()
+# def filter_checkbox(browser, num_test):
+#     test_sheet = []
+#     with open(f"testlists/list_for_test_{num_test}.txt", "r") as file:
+#         for link_text in file:
+#             link_text = link_text.replace("\n", "").split("\t")
+#             if link_text[-1] == "active":
+#                 checkbox = browser.find_element(By.PARTIAL_LINK_TEXT, f"{link_text}")
+#                 checkbox.click()
 
 
-def filter_radiobutton(browser, filter):
-    elements = filter.find_elements(By.TAG_NAME, "li")
-    for i in range(0, len(elements)):
-        # if i == 0:
-        #     continue
-        radiobutton = elements[i].find_elements(By.TAG_NAME, "span")[1]
-        print(radiobutton.text)
-    #     radiobutton[0].click()
-    #     sleep(t_low)
-    #     count_goods(browser)
-    #     show_all(browser)
-    # elements[0].find_element(By.TAG_NAME, "span").click()
+# def filter_radiobutton(browser, filter):
+#     elements = filter.find_elements(By.TAG_NAME, "li")
+#     for i in range(0, len(elements)):
+#         # if i == 0:
+#         #     continue
+#         radiobutton = elements[i].find_elements(By.TAG_NAME, "span")[1]
+#         print(radiobutton.text)
+#     #     radiobutton[0].click()
+#     #     sleep(t_low)
+#     #     count_goods(browser)
+#     #     show_all(browser)
+#     # elements[0].find_element(By.TAG_NAME, "span").click()
 
-    with open(f"{time_now}_radiobuttons.txt", "a") as file:
-        file.write("\n")
+#     with open(f"{time_now}_radiobuttons.txt", "a") as file:
+#         file.write("\n")
 
 
 def checkbox_filter_adding(browser):
@@ -134,30 +134,36 @@ def radio_filter_adding(browser):
 
 
 def pairwise_list_making(browser):
-    # filter_name = browser.find_elements(By.XPATH, "//h3[@class='filters-desktop__item-title']")
-    # del filter_name[3]
-    # filters = browser.find_elements(By.CLASS_NAME, "filter__list")
-    # print(len(filters))
-    # for i in range(0, len(filters)):
-        # print("_____________________________________________________________")
-        # print(filter_name[i].text)
-        # filters = browser.find_elements(By.CLASS_NAME, "filter__list")
-        # if filter_type(filters[i]) == "checkbox":
         checkbox_filter_adding(browser)
-        # else:
         radio_filter_adding(browser)
 
 
-def filters_count(browser):
-    filter_name = browser.find_elements(By.XPATH, "//h3[@class='filters-desktop__item-title']")
-    del filter_name[3]
-    filters = browser.find_elements(By.CLASS_NAME, "filter__list")
-    # print(len(filters))
-    for i in range(len(filters)-1, -1, -1):
-        print("_____________________________________________________________")
-        # filters = browser.find_elements(By.CLASS_NAME, "filter__list")
-        if filter_type(filters[i]) == "checkbox":
-            filter_checkbox(browser, filters[i])
-        else:
-            filter_radiobutton(filter_name[i].text, browser, filters[i])
+# def filters_count(browser):
+#     filter_name = browser.find_elements(By.XPATH, "//h3[@class='filters-desktop__item-title']")
+#     del filter_name[3]
+#     filters = browser.find_elements(By.CLASS_NAME, "filter__list")
+#     # print(len(filters))
+#     for i in range(len(filters)-1, -1, -1):
+#         print("_____________________________________________________________")
+#         # filters = browser.find_elements(By.CLASS_NAME, "filter__list")
+#         if filter_type(filters[i]) == "checkbox":
+#             filter_checkbox(browser, filters[i])
+#         else:
+#             filter_radiobutton(filter_name[i].text, browser, filters[i])
 
+
+def site_testing(browser):
+    # for i in range(1, lists_of_testing()):
+    for i in range(1, 2):
+        elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-1")
+        for elem in elements:
+            element = elem.find_element(By.TAG_NAME, "h3")
+            print(element.text)
+            with open(f"testlists/ready_for_test_{i}.txt", "r") as file:
+                for line in file:
+                    line = line.strip().split("_")
+                    if element.text == line[0]:
+                        print(line)
+
+
+# site_testing()

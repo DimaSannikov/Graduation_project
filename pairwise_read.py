@@ -1,67 +1,69 @@
-array = []
-translate = []
+def translated_list():
+    array = []
+    translate = []
+
+    with open("translate_for_test.txt", "r") as file:
+        for line in file:
+            line = line.replace("\n", "")
+            line = line.split("\t")
+            translate.append(line)
+
+    with open("pairwise.txt", "r") as file:
+        for line in file:
+            line = line.replace("\n", "")
+            line = line.split("\t")
+            array.append(line)
+
+    return array, translate
 
 
-with open("translate_for_test.txt", "r") as file:
-    for line in file:
-        line = line.replace("\n", "")
-        line = line.split("\t")
-        translate.append(line)
+def test_list(array, translate):
+    new_array = []
 
-with open("pairwise.txt", "r") as file:
-    for line in file:
-        line = line.replace("\n", "")
-        line = line.split("\t")
-        array.append(line)
+    for line in array:
+        new_line = []
+        for element in line:
+            for elem in translate:
+                test_array = []
 
-# print(array[0])
-
-
-new_array = []
-
-for line in array:
-# line = array[0]
-    new_line = []
-    for element in line:
-        for elem in translate:
-            test_array = []
-
-            if element == elem[0]:
-                test_array.append(elem[1].split("_")[0])
-                test_array.append(elem[1].split("_")[1])
-                new_line.append(test_array)
-                # print(test_array)
-                # print(elem[1].split("_")[0], elem[1].split("_")[1])                               # element.split("_"), 
-            
-            elif element == elem[0].split("_")[0]:
-                test_array.append(elem[1].split("_")[0])
-                if test_array not in new_line:
+                if element == elem[0]:
+                    test_array.append(elem[1].split("_")[0])
+                    test_array.append(elem[1].split("_")[1])
                     new_line.append(test_array)
-                    # print(test_array)
-            
-            elif element == elem[0].split("_")[1]:
-                # test_array.append(elem[1].split("_")[1])
-                if test_array not in new_line:
-                    new_line.append(elem[1].split("_")[1])
-                    # print(element, test_array)
+                
+                elif element == elem[0].split("_")[0]:
+                    test_array.append(elem[1].split("_")[0])
+                    if test_array not in new_line:
+                        new_line.append(test_array)
+                
+                elif element == elem[0].split("_")[1]:
+                    if test_array not in new_line:
+                        new_line.append(elem[1].split("_")[1])
 
-        if len(element) == 1:
-            new_line.append(element)
+            if len(element) == 1:
+                new_line.append(element)
 
-    # print(new_line)
-    new_array.append(new_line)
+        new_array.append(new_line)
+    return new_array
 
 
-for line in range(1, len(new_array)):
-    count = 0
-    for element in new_array[line]:
-        print(f"{new_array[0][count]}\t{element}")
-        with open(f"testlists/ready_for_test_{line}.txt", "a") as file:
-            file.writelines(f"{new_array[0][count]}\t{element}\n")
-        count += 1
+def lists_of_testing():
+    array, translate = translated_list()
+    new_array = test_list(array, translate)
 
-# while position < len(array[0]):
-#     with open(f"testlists/list_for_test_1.txt", "a") as file:
-#         file.writelines(f"{array[0][position]}\t{array[1][position]}\n")
-#     print(array[0][position], array[1][position])
-#     position += 1
+    for line in range(1, len(new_array)):
+        count = 0
+        for element in new_array[line]:
+            if len(new_array[0][count]) == 2:
+                print(f"{new_array[0][count][0]}_{new_array[0][count][1]}_{element}")
+                with open(f"testlists/ready_for_test_{line}.txt", "a") as file:
+                    file.writelines(f"{new_array[0][count][0]}_{new_array[0][count][1]}_{element}\n")
+            else:
+                print(f"{new_array[0][count][0]}_{element}")
+                with open(f"testlists/ready_for_test_{line}.txt", "a") as file:
+                    file.writelines(f"{new_array[0][count][0]}_{element}\n")
+            count += 1
+
+    return len(new_array)
+
+# lists_of_testing()
