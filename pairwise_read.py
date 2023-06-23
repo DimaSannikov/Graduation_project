@@ -2,7 +2,7 @@ array = []
 translate = []
 
 
-with open("translate_pairwise.txt", "r") as file:
+with open("translate_for_test.txt", "r") as file:
     for line in file:
         line = line.replace("\n", "")
         line = line.split("\t")
@@ -10,29 +10,31 @@ with open("translate_pairwise.txt", "r") as file:
 
 # print(translate)
 
+# for elem in translate:
+#     print(elem[0], elem[1])
+
 with open("pairwise.txt", "r") as file:
-    line_count = 0
     for line in file:
         line = line.replace("\n", "")
         line = line.split("\t")
         array.append(line)
-        pos_elem = 0
-        while pos_elem < len(array[0]):
-            # print(new_line[0][pos_elem])
-            for elem in translate:
-                if array[line_count][pos_elem] == elem[0]:
-                    # print(new_line[line_count][pos_elem], elem[1])
-                    array[line_count][pos_elem] = elem[1]
-            pos_elem += 1
-        line_count += 1
 
-# for line in array:
-#     position = 0
-#     while position < len(array[0]):
-#         print(array[0][position], line[position])
-#         position += 1
+# print(array)
 
-position = 0
-while position < len(array[0]):
-    print(array[0][position], array[1][position])
-    position += 1
+new_array = []
+
+for line in array:
+    new_line = []
+    for element in line:
+        # print(element)
+        for elem in translate:
+            if element == elem[0]:
+                print(element.split("_"), elem[1].split("_"))
+            elif element == elem[0].split("_")[1]:
+                print(elem[0].split("_")[1], elem[1].split("_")[0], elem[1].split("_")[1])
+
+# while position < len(array[0]):
+#     with open(f"testlists/list_for_test_1.txt", "a") as file:
+#         file.writelines(f"{array[0][position]}\t{array[1][position]}\n")
+#     print(array[0][position], array[1][position])
+#     position += 1

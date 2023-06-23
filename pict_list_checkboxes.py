@@ -1,40 +1,28 @@
-new_line = []
-new_letters = []
+array = []
+edit_letters = []
 
-with open("19:09_checkboxes.txt", "r") as file:
+with open("00:35_checkboxes.txt", "r") as file:
     for line in file:
-        # print(line.rstrip())
-        new_line.append(line.rstrip())
+        array.append(line.rstrip())
 
 with open("translit_new.txt", "r") as fl:
     for ln in fl:
-        # print(ln.rstrip())
 
-        new_letters.append(ln.rstrip())
+        edit_letters.append(ln.rstrip())
 
-for line in new_line:
+for line in array:
 
     translate_line = line
-    # print(line)
     for symbol in line:
-        # print(symbol)
 
-        for letter in new_letters:
+        for letter in edit_letters:
             if symbol == letter[0]:
-                # print(f"{symbol} ==>> {letter[-1]}")
                 translate_line = translate_line.replace(symbol, letter[2:])
-            # if symbol == " ":
-            #     translate_line = translate_line.replace(" ", "_")
 
     if len(translate_line) != 0:
-        with open("translate_for_pict.txt", "a") as file:
-            # yuuniworks.append()
-            file.writelines(f"{translate_line} active, inactive")
+        translate_line = translate_line.split("_")[0][0: 3] + "_" + translate_line.split("_")[1]
+        print(f"{translate_line}")
+        
+        with open("translate_for_pict_new.txt", "a") as file:
+            file.writelines(f"{translate_line} a, i")                      # a - active checkbox, i - inactive
             file.write("\n")
-
-        # with open("translate_pairwise.txt", "a") as file:
-        #     # yuuniworks.append()
-        #     line = line.replace("_", " ").split(" ", 1)[1].replace(":", "")
-        #     translate_line = translate_line.replace(":", "")
-        #     file.writelines(f"{translate_line}\t{line}")
-        #     file.write("\n")
