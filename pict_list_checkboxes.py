@@ -23,6 +23,6 @@ for line in array:
         translate_line = translate_line.split("_")[0][0: 3] + "_" + translate_line.split("_")[1]
         print(f"{translate_line}")
         
-        with open("translate_for_pict_new.txt", "a") as file:
+        with open("translate_for_pict.txt", "a") as file:
             file.writelines(f"{translate_line} a, i")                      # a - active checkbox, i - inactive
             file.write("\n")

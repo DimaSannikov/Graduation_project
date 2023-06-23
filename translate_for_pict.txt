@@ -1,178 +1,166 @@
-1_O'STIN: active, inactive
-1_oodji: active, inactive
-1_Zolla: active, inactive
-1_Modis: active, inactive
-1_Befree: active, inactive
-1_TVOE: active, inactive
-1_GUESS: active, inactive
-2_Wildberries: active, inactive
-2_OSTIN_OOO: active, inactive
-2_oodji: active, inactive
-2_Zolla: active, inactive
-2_MELON_FASHION_GROUP: active, inactive
-2_MODIS: active, inactive
-2_OOO_Sportmaster: active, inactive
-4_Bezhevyy: active, inactive
-4_Belyy: active, inactive
-4_Goluboy: active, inactive
-4_Zheltyy: active, inactive
-4_Zelenyy: active, inactive
-4_Korichnevyy: active, inactive
-4_Krasnyy: active, inactive
-4_Oranzhevyy: active, inactive
-4_Rozovyy: active, inactive
-4_Seryy: active, inactive
-4_Siniy: active, inactive
-4_Fioletovyy: active, inactive
-4_Chernyy: active, inactive
-5_1: active, inactive
-5_3: active, inactive
-5_30: active, inactive
-5_31: active, inactive
-5_32: active, inactive
-5_34: active, inactive
-5_35: active, inactive
-5_36: active, inactive
-5_37: active, inactive
-5_38: active, inactive
-5_39: active, inactive
-5_40: active, inactive
-5_41: active, inactive
-5_42: active, inactive
-5_43: active, inactive
-5_44: active, inactive
-5_45: active, inactive
-5_46: active, inactive
-5_47: active, inactive
-5_48: active, inactive
-5_49: active, inactive
-5_50: active, inactive
-5_51: active, inactive
-5_52: active, inactive
-5_53: active, inactive
-5_54: active, inactive
-5_55: active, inactive
-5_56: active, inactive
-5_57: active, inactive
-5_58: active, inactive
-5_59: active, inactive
-5_60: active, inactive
-5_61: active, inactive
-5_62: active, inactive
-5_63: active, inactive
-5_64: active, inactive
-5_65: active, inactive
-5_66: active, inactive
-5_67: active, inactive
-5_68: active, inactive
-5_69: active, inactive
-5_70: active, inactive
-5_71: active, inactive
-5_72: active, inactive
-5_73: active, inactive
-5_74: active, inactive
-5_75: active, inactive
-5_76: active, inactive
-5_77: active, inactive
-5_78: active, inactive
-5_79: active, inactive
-5_80: active, inactive
-5_81: active, inactive
-5_82: active, inactive
-5_83: active, inactive
-5_84: active, inactive
-5_85: active, inactive
-5_86: active, inactive
-5_87: active, inactive
-5_88: active, inactive
-5_89: active, inactive
-5_90: active, inactive
-5_91: active, inactive
-5_92: active, inactive
-5_93: active, inactive
-5_94: active, inactive
-5_95: active, inactive
-5_96: active, inactive
-5_97: active, inactive
-5_98: active, inactive
-5_104: active, inactive
-5_110: active, inactive
-5_116: active, inactive
-5_122: active, inactive
-5_128: active, inactive
-6_akril: active, inactive
-6_bayka: active, inactive
-6_bambuk: active, inactive
-6_vel0vet: active, inactive
-6_viskoza: active, inactive
-6_laykra: active, inactive
-6_len: active, inactive
-6_liotsell: active, inactive
-6_neylon: active, inactive
-6_poliamid: active, inactive
-6_poliuretan: active, inactive
-6_poliester: active, inactive
-6_poliefir: active, inactive
-6_spandeks: active, inactive
-6_tekstil0: active, inactive
-6_flanel0: active, inactive
-6_flis: active, inactive
-6_khlopok: active, inactive
-6_sherst0: active, inactive
-6_shtapel0: active, inactive
-6_elastan: active, inactive
-7_bez_karmanov: active, inactive
-7_v_shve: active, inactive
-7_kenguru: active, inactive
-7_nakladnye: active, inactive
-7_potaynye: active, inactive
-7_proreznye: active, inactive
-7_s_klapanom: active, inactive
-8_bol0shie_razmery: active, inactive
-8_vechernyaya_moda: active, inactive
-8_vypusknoy: active, inactive
-8_dlya_kreshcheniya: active, inactive
-8_domashnyaya_odezhda: active, inactive
-8_na_vypisku: active, inactive
-8_novyy_god: active, inactive
-8_ofis: active, inactive
-8_plyazh: active, inactive
-8_povsednevnaya: active, inactive
-8_svad0ba: active, inactive
-8_sport: active, inactive
-8_shkola: active, inactive
-9_bez_zastezhki: active, inactive
-9_zavyazki: active, inactive
-9_knopki: active, inactive
-9_lipuchka: active, inactive
-9_molniya: active, inactive
-9_pugovitsy: active, inactive
-9_shnurovka: active, inactive
-10_gladit0_na_nizkoy_temperature: active, inactive
-10_gladit0_pri_t_ne_bolee_100oC: active, inactive
-10_gladit0_pri_t_ne_bolee_110oC: active, inactive
-10_gladit0_pri_t_ne_bolee_130oC: active, inactive
-10_gladit0_pri_t_ne_bolee_150oC: active, inactive
-10_gladit0_pri_t_ne_bolee_90oC: active, inactive
-10_gladit0_pri_t_utyuga_do_200oC: active, inactive
-10_gladit0_s_iznanki: active, inactive
-10_delikatnaya_stirka: active, inactive
-10_delikatnaya_khimicheskaya_chistka: active, inactive
-10_delikatnyy_otzhim: active, inactive
-10_dopuskaetsya_otparivanie: active, inactive
-10_otbelivanie_zapreshcheno: active, inactive
-10_otzhim_zapreshchen: active, inactive
-10_ruchnaya_stirka: active, inactive
-10_stirat0_iznankoy_naruzhu: active, inactive
-10_stirka_pri_t_ne_bolee_30oC: active, inactive
-10_stirka_pri_t_ne_bolee_40oC: active, inactive
-10_stirka_pri_t_ne_bolee_50oC: active, inactive
-10_stirka_pri_t_ne_bolee_60S: active, inactive
-10_sukhaya_chistka: active, inactive
-10_sushka_v_vertikal0nom_polozhenii: active, inactive
-10_sushka_v_gorizontal0nom_polozhenii: active, inactive
-10_sushka_v_sushil0noy_mashine: active, inactive
-10_khimicheskaya_chistka: active, inactive
-10_khimicheskaya_chistka_zapreshchena: active, inactive
-1_Srok_dostavki: Lyuboy, 1 den0, 2 dnya, do 3 dney, do 5 dney
-4_Skidka: Lyubaya, ot 10% i vyshe, ot 30% i vyshe, ot 50% i vyshe, ot 70% i vyshe
+Bre_O'STIN: a, i
+Bre_oodji: a, i
+Bre_Zolla: a, i
+Bre_Modis: a, i
+Bre_Befree: a, i
+Bre_TVOE: a, i
+Bre_GUESS: a, i
+Pro_Wildberries: a, i
+Pro_OSTIN OOO: a, i
+Pro_oodji: a, i
+Pro_Zolla: a, i
+Pro_MELON FASHION GROUP: a, i
+Pro_MODIS: a, i
+Pro_OOO Sportmaster: a, i
+Raz_1: a, i
+Raz_3: a, i
+Raz_23: a, i
+Raz_24: a, i
+Raz_30: a, i
+Raz_31: a, i
+Raz_32: a, i
+Raz_34: a, i
+Raz_35: a, i
+Raz_36: a, i
+Raz_37: a, i
+Raz_38: a, i
+Raz_39: a, i
+Raz_40: a, i
+Raz_41: a, i
+Raz_42: a, i
+Raz_43: a, i
+Raz_44: a, i
+Raz_45: a, i
+Raz_46: a, i
+Raz_47: a, i
+Raz_48: a, i
+Raz_49: a, i
+Raz_50: a, i
+Raz_51: a, i
+Raz_52: a, i
+Raz_53: a, i
+Raz_54: a, i
+Raz_55: a, i
+Raz_56: a, i
+Raz_57: a, i
+Raz_58: a, i
+Raz_59: a, i
+Raz_60: a, i
+Raz_61: a, i
+Raz_62: a, i
+Raz_63: a, i
+Raz_64: a, i
+Raz_65: a, i
+Raz_66: a, i
+Raz_67: a, i
+Raz_68: a, i
+Raz_69: a, i
+Raz_70: a, i
+Raz_71: a, i
+Raz_72: a, i
+Raz_73: a, i
+Raz_74: a, i
+Raz_75: a, i
+Raz_76: a, i
+Raz_77: a, i
+Raz_78: a, i
+Raz_79: a, i
+Raz_80: a, i
+Raz_81: a, i
+Raz_82: a, i
+Raz_83: a, i
+Raz_84: a, i
+Raz_85: a, i
+Raz_86: a, i
+Raz_87: a, i
+Raz_88: a, i
+Raz_89: a, i
+Raz_90: a, i
+Raz_91: a, i
+Raz_92: a, i
+Raz_93: a, i
+Raz_94: a, i
+Raz_95: a, i
+Raz_96: a, i
+Raz_97: a, i
+Raz_98: a, i
+Raz_104: a, i
+Raz_110: a, i
+Raz_116: a, i
+Sos_akril: a, i
+Sos_bayka: a, i
+Sos_bambuk: a, i
+Sos_vel'vet: a, i
+Sos_viskoza: a, i
+Sos_laykra: a, i
+Sos_len: a, i
+Sos_liotsell: a, i
+Sos_neylon: a, i
+Sos_poliamid: a, i
+Sos_poliuretan: a, i
+Sos_poliester: a, i
+Sos_poliefir: a, i
+Sos_spandeks: a, i
+Sos_tekstil': a, i
+Sos_flanel': a, i
+Sos_flis: a, i
+Sos_khlopok: a, i
+Sos_sherst': a, i
+Sos_shtapel': a, i
+Sos_elastan: a, i
+Tip_bez karmanov: a, i
+Tip_v shve: a, i
+Tip_kenguru: a, i
+Tip_nakladnye: a, i
+Tip_potaynye: a, i
+Tip_proreznye: a, i
+Tip_s klapanom: a, i
+Naz_bol'shie razmery: a, i
+Naz_vechernyaya moda: a, i
+Naz_vypusknoy: a, i
+Naz_dlya kreshcheniya: a, i
+Naz_domashnyaya odezhda: a, i
+Naz_na vypisku: a, i
+Naz_novyy god: a, i
+Naz_ofis: a, i
+Naz_plyazh: a, i
+Naz_povsednevnaya: a, i
+Naz_poslerodovoe: a, i
+Naz_svad'ba: a, i
+Naz_sport: a, i
+Naz_shkola: a, i
+Vid_bez zastezhki: a, i
+Vid_zavyazki: a, i
+Vid_knopki: a, i
+Vid_lipuchka: a, i
+Vid_molniya: a, i
+Vid_pugovitsy: a, i
+Vid_shnurovka: a, i
+Ukh_gladit' na nizkoy temperature: a, i
+Ukh_gladit' pri t ne bolee 100oC: a, i
+Ukh_gladit' pri t ne bolee 110oC: a, i
+Ukh_gladit' pri t ne bolee 130oC: a, i
+Ukh_gladit' pri t ne bolee 150oC: a, i
+Ukh_gladit' pri t ne bolee 90oC: a, i
+Ukh_gladit' pri t utyuga do 200oC: a, i
+Ukh_gladit' s iznanki: a, i
+Ukh_delikatnaya stirka: a, i
+Ukh_delikatnaya khimicheskaya chistka: a, i
+Ukh_delikatnyy otzhim: a, i
+Ukh_dopuskaetsya otparivanie: a, i
+Ukh_otbelivanie zapreshcheno: a, i
+Ukh_otzhim zapreshchen: a, i
+Ukh_ruchnaya stirka: a, i
+Ukh_stirat' iznankoy naruzhu: a, i
+Ukh_stirka pri t ne bolee 30oC: a, i
+Ukh_stirka pri t ne bolee 40oC: a, i
+Ukh_stirka pri t ne bolee 50oC: a, i
+Ukh_stirka pri t ne bolee 60S: a, i
+Ukh_sukhaya chistka: a, i
+Ukh_sushka v vertikal'nom polozhenii: a, i
+Ukh_sushka v gorizontal'nom polozhenii: a, i
+Ukh_sushka v sushil'noy mashine: a, i
+Ukh_khimicheskaya chistka: a, i
+Ukh_khimicheskaya chistka zapreshchena: a, i
+Srok dostavki: Lyuboy, 1 den', 2 dnya, do 3 dney, do 5 dney
+Skidka: Lyubaya, ot 10% i vyshe, ot 30% i vyshe, ot 50% i vyshe, ot 70% i vyshe

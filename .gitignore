@@ -10,3 +10,6 @@ geckodriver.log
 .idea
 .vscode
 __pycache__
+test_links.py
+test_tabs.py
+/testlists

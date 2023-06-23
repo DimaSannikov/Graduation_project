@@ -22,6 +22,6 @@ for line in array:
     if len(translate_line) != 0:
         print(f"{translate_line}")
 
-        with open("translate_for_pict_new.txt", "a") as file:
+        with open("translate_for_pict.txt", "a") as file:
             file.writelines(f"{translate_line}")
             file.write("\n")
