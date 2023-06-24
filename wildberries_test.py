@@ -155,15 +155,31 @@ def pairwise_list_making(browser):
 def site_testing(browser):
     # for i in range(1, lists_of_testing()):
     for i in range(1, 2):
+        list = []
+
+        with open(f"testlists/ready_for_test_{i}.txt", "r") as file:
+            for line in file:
+                line = line.strip().split("_")
+                list.append(line)
+        
         elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-1")
         for elem in elements:
             element = elem.find_element(By.TAG_NAME, "h3")
-            print(element.text)
-            with open(f"testlists/ready_for_test_{i}.txt", "r") as file:
-                for line in file:
-                    line = line.strip().split("_")
-                    if element.text == line[0]:
-                        print(line)
+            gr_parent = element.find_element(By.XPATH, "..").find_element(By.XPATH, "..")
+
+            ul = gr_parent.find_elements(By.TAG_NAME, "li")
+
+            for li in ul:
+                for name in list:
+                    if element.text == name[0] and len(name) == 3 and name[1] in li.text:             # пи*дец тут
+                        print(name[0], name[1], element.text)
+
+                # print(gr_parent.get_attribute("class"))
+                # li_names = gr_parent.find_elements(By.TAG_NAME, "li")
+                # for li_name in li_names:
+                #     name = li_name.find_elements(By.TAG_NAME, "span")[1]
+                #     print(li_name.text)
+            
 
 
 # site_testing()

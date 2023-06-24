@@ -36,8 +36,8 @@ try:
     # wb.show_all(browser)
     # sleep(t_low)
 
-    wb.count_goods(browser)
-    sleep(t_medium)
+    # wb.count_goods(browser)
+    # sleep(t_low)
 
     # wb.filters_count(browser)
     # sleep(t_micro)
