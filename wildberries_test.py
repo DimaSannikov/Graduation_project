@@ -138,6 +138,53 @@ def pairwise_list_making(browser):
         radio_filter_adding(browser)
 
 
+def checkbox_choose(browser, list_):
+    list = list_
+    elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-1")
+
+    x = 1
+    for elem in elements:
+        element = elem.find_element(By.TAG_NAME, "h3")
+        gr_parent = element.find_element(By.XPATH, "..").find_element(By.XPATH, "..")
+        ul = gr_parent.find_elements(By.TAG_NAME, "li")
+        print(len(ul))
+        
+        y = 1
+        for li in ul:
+            checkbox = li.find_elements(By.TAG_NAME, "span")[1].text
+            checkbox_child = li.find_elements(By.TAG_NAME, "span")[1].find_element(By.TAG_NAME, "span").text
+            parent_text = checkbox.replace(checkbox_child, '').replace(' ', '')
+
+            z = 1
+            for count in range(len(list)):
+                # print(f"x={x}, y={y}, z={z}")
+                # print(len(list))
+                if parent_text == list[count][1]:
+                    print(f"{parent_text} = {list[count][1]}, {list[count][0]}, {list[count][2]}")
+                
+                    # list.pop(count)
+                    # continue
+                z += 1
+            y += 1
+        x += 1
+
+
+def radio_choose(browser, list):
+    elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-7")
+
+    for elem in elements:
+        element = elem.find_element(By.TAG_NAME, "h3")
+        gr_parent = element.find_element(By.XPATH, "..").find_element(By.XPATH, "..")
+        ul = gr_parent.find_elements(By.TAG_NAME, "li")
+        
+        for li in ul:
+            radio = li.find_elements(By.TAG_NAME, "span")[1].text
+
+            for name in list:
+                if name[1] == radio:
+                    print(f"{radio} = {name[1]}, {name[0]}")
+
+
 # def filters_count(browser):
 #     filter_name = browser.find_elements(By.XPATH, "//h3[@class='filters-desktop__item-title']")
 #     del filter_name[3]
@@ -162,24 +209,7 @@ def site_testing(browser):
                 line = line.strip().split("_")
                 list.append(line)
         
-        elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-1")
-        for elem in elements:
-            element = elem.find_element(By.TAG_NAME, "h3")
-            gr_parent = element.find_element(By.XPATH, "..").find_element(By.XPATH, "..")
-
-            ul = gr_parent.find_elements(By.TAG_NAME, "li")
-
-            for li in ul:
-                for name in list:
-                    if element.text == name[0] and len(name) == 3 and name[1] in li.text:             # пи*дец тут
-                        print(name[0], name[1], element.text)
-
-                # print(gr_parent.get_attribute("class"))
-                # li_names = gr_parent.find_elements(By.TAG_NAME, "li")
-                # for li_name in li_names:
-                #     name = li_name.find_elements(By.TAG_NAME, "span")[1]
-                #     print(li_name.text)
-            
-
+        checkbox_choose(browser, list)
+        radio_choose(browser, list)
 
 # site_testing()
