@@ -141,32 +141,39 @@ def pairwise_list_making(browser):
 def checkbox_choose(browser, list_):
     list = list_
     elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-1")
+    # elements = browser.find_element(By.CLASS_NAME, "filters-desktop__item--type-1")
 
-    x = 1
+    # x = 1
     for elem in elements:
+        # elem = elements
+        filter_list = []
         element = elem.find_element(By.TAG_NAME, "h3")
         gr_parent = element.find_element(By.XPATH, "..").find_element(By.XPATH, "..")
         ul = gr_parent.find_elements(By.TAG_NAME, "li")
-        print(len(ul))
+        for filter_element in list:
+            if element.text == filter_element[0]:
+                filter_list.append(filter_element)
+                print(filter_element)
         
-        y = 1
+        # y = 1
         for li in ul:
             checkbox = li.find_elements(By.TAG_NAME, "span")[1].text
             checkbox_child = li.find_elements(By.TAG_NAME, "span")[1].find_element(By.TAG_NAME, "span").text
             parent_text = checkbox.replace(checkbox_child, '').replace(' ', '')
 
-            z = 1
-            for count in range(len(list)):
-                # print(f"x={x}, y={y}, z={z}")
-                # print(len(list))
-                if parent_text == list[count][1]:
-                    print(f"{parent_text} = {list[count][1]}, {list[count][0]}, {list[count][2]}")
+            lenght = len(filter_list)
+            count = 0
+            for filter_element in range(lenght):
+                # print(f"x={x} y={y} count={count} lenght={lenght}")
+                if filter_list[count][1] == parent_text:
+                    print(f"{parent_text} = {filter_list[count][1]}, {filter_list[count][0]}, {filter_list[count][2]}")
                 
-                    # list.pop(count)
-                    # continue
-                z += 1
-            y += 1
-        x += 1
+                    filter_list.pop(count)
+                    # print(filter_list)
+                    continue
+                count += 1
+        #     y += 1
+        # x += 1
 
 
 def radio_choose(browser, list):
