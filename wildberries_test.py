@@ -50,6 +50,7 @@ def show_all(browser):
 
 def count_goods(browser):
     goods = browser.find_element(By.XPATH, "//p[@class='filters-desktop__count-goods']")
+    sleep(t_low)
     print(goods.text)
 
 
@@ -150,28 +151,40 @@ def checkbox_choose(browser, list_):
         element = elem.find_element(By.TAG_NAME, "h3")
         gr_parent = element.find_element(By.XPATH, "..").find_element(By.XPATH, "..")
         ul = gr_parent.find_elements(By.TAG_NAME, "li")
+
         for filter_element in list:
             if element.text == filter_element[0]:
                 filter_list.append(filter_element)
-                print(filter_element)
+                # print(filter_element)
         
         # y = 1
         for li in ul:
-            checkbox = li.find_elements(By.TAG_NAME, "span")[1].text
+            checkbox = li.find_elements(By.TAG_NAME, "span")
+            checkbox_parent = checkbox[1].text
             checkbox_child = li.find_elements(By.TAG_NAME, "span")[1].find_element(By.TAG_NAME, "span").text
-            parent_text = checkbox.replace(checkbox_child, '').replace(' ', '')
+            parent_text = checkbox_parent.replace(checkbox_child, '').replace(' ', '')
 
             lenght = len(filter_list)
             count = 0
+
             for filter_element in range(lenght):
                 # print(f"x={x} y={y} count={count} lenght={lenght}")
+
                 if filter_list[count][1] == parent_text:
-                    print(f"{parent_text} = {filter_list[count][1]}, {filter_list[count][0]}, {filter_list[count][2]}")
+                    action = ""
+                    if filter_list[count][2] == "a":
+                        checkbox[0].click()
+                        action = "active"
+                    else:
+                        action = "inactive"
+                    # print(f"{parent_text} = {filter_list[count][1]}, {filter_list[count][0]}, {filter_list[count][2]}")
+                    print(f"{filter_list[count][0]} - {filter_list[count][1]} -> {action}")
                 
                     filter_list.pop(count)
                     # print(filter_list)
                     continue
                 count += 1
+
         #     y += 1
         # x += 1
 
@@ -185,11 +198,13 @@ def radio_choose(browser, list):
         ul = gr_parent.find_elements(By.TAG_NAME, "li")
         
         for li in ul:
-            radio = li.find_elements(By.TAG_NAME, "span")[1].text
+            radio = li.find_elements(By.TAG_NAME, "span")
+            radio_name = radio[1].text
 
             for name in list:
-                if name[1] == radio:
-                    print(f"{radio} = {name[1]}, {name[0]}")
+                if name[1] == radio_name:
+                    radio[0].click()
+                    print(f"{radio_name} = {name[1]}, {name[0]}")
 
 
 # def filters_count(browser):
@@ -206,6 +221,11 @@ def radio_choose(browser, list):
 #             filter_radiobutton(filter_name[i].text, browser, filters[i])
 
 
+def show_button_click(browser):
+    button = browser.find_element(By.CLASS_NAME, "filters-desktop__btn-main")
+    button.click()
+
+
 def site_testing(browser):
     # for i in range(1, lists_of_testing()):
     for i in range(1, 2):
@@ -216,7 +236,10 @@ def site_testing(browser):
                 line = line.strip().split("_")
                 list.append(line)
         
+        count_goods(browser)
         checkbox_choose(browser, list)
         radio_choose(browser, list)
+        count_goods(browser)
+        show_button_click(browser)
 
 # site_testing()

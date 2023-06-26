@@ -36,13 +36,8 @@ try:
     # wb.show_all(browser)
     # sleep(t_low)
 
-    # wb.count_goods(browser)
-    # sleep(t_low)
-
-    # wb.filters_count(browser)
-    # sleep(t_micro)
-
     wb.site_testing(browser)
+    sleep(t_low)
 
 finally:
     browser.close()
