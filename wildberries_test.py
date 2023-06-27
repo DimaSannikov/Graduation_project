@@ -14,8 +14,8 @@ time_now = now.strftime("%H:%M")
 
 
 def cookies_download(browser):
-        with open(f"WB_cookies.pkl", 'wb') as file:
-            pickle.dump(browser.get_cookies(), file)
+    with open(f"WB_cookies.pkl", 'wb') as file:
+        pickle.dump(browser.get_cookies(), file)
 
 
 def cookies_upload(browser, URL):
@@ -90,13 +90,15 @@ def count_goods(browser):
 def checkbox_filter_adding(browser):
     elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-1")
     for element in elements:
-        filter_list = element.find_element(By.CLASS_NAME, "filter__list").find_elements(By.TAG_NAME, "li")
+        filter_list = element.find_element(
+            By.CLASS_NAME, "filter__list").find_elements(By.TAG_NAME, "li")
         filter_name = element.find_element(By.TAG_NAME, "h3").text
         print(filter_name)
 
         for filter in filter_list:
             checkbox = filter.find_elements(By.TAG_NAME, "span")[1].text
-            checkbox_child = filter.find_elements(By.TAG_NAME, "span")[1].find_element(By.TAG_NAME, "span").text
+            checkbox_child = filter.find_elements(
+                By.TAG_NAME, "span")[1].find_element(By.TAG_NAME, "span").text
             parent_text = checkbox.replace(checkbox_child, '').replace(' ', '')
             
             with open(f"{time_now}_checkboxes.txt", "a") as file:
@@ -110,24 +112,23 @@ def checkbox_filter_adding(browser):
 
 
 def radio_filter_adding(browser):
-    elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-7")
+    elements = browser.find_elements(
+        By.CLASS_NAME, "filters-desktop__item--type-7")
     
     for element in elements:
-        filter_list = element.find_element(By.CLASS_NAME, "filter__list").find_elements(By.TAG_NAME, "li")
+        filter_list = element.find_element(
+            By.CLASS_NAME, "filter__list").find_elements(By.TAG_NAME, "li")
         filter_name = element.find_element(By.TAG_NAME, "h3").text
         
         with open(f"{time_now}_radiobuttons.txt", "a") as file:
             file.writelines(f"{filter_name}: ")
-
             print(filter_name)
         
         for i in range(0, len(filter_list)):
-
             radiobutton = filter_list[i].find_elements(By.TAG_NAME, "span")[1]
 
             with open(f"{time_now}_radiobuttons.txt", "a") as file:
                 file.writelines(f"{radiobutton.text}, ")
-
             print(f"{radiobutton.text}, ")
 
         with open(f"{time_now}_radiobuttons.txt", "a") as file:
