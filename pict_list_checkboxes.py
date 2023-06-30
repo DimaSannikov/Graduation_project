@@ -1,7 +1,7 @@
 array = []
 edit_letters = []
 
-with open("00:35_checkboxes.txt", "r") as file:
+with open("checkboxes.txt", "r") as file:
     for line in file:
         array.append(line.rstrip())
 

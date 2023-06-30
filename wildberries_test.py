@@ -59,39 +59,6 @@ def count_goods(browser):
     print(goods.text)
 
 
-# def filter_type(filter):
-#     elements = filter.find_elements(By.TAG_NAME, "li")
-#     element_type = elements[0].find_element(By.TAG_NAME, "span").get_attribute('class').split("-")[0]
-#     return element_type
-
-
-# def filter_checkbox(browser, num_test):
-#     test_sheet = []
-#     with open(f"testlists/list_for_test_{num_test}.txt", "r") as file:
-#         for link_text in file:
-#             link_text = link_text.replace("\n", "").split("\t")
-#             if link_text[-1] == "active":
-#                 checkbox = browser.find_element(By.PARTIAL_LINK_TEXT, f"{link_text}")
-#                 checkbox.click()
-
-
-# def filter_radiobutton(browser, filter):
-#     elements = filter.find_elements(By.TAG_NAME, "li")
-#     for i in range(0, len(elements)):
-#         # if i == 0:
-#         #     continue
-#         radiobutton = elements[i].find_elements(By.TAG_NAME, "span")[1]
-#         print(radiobutton.text)
-#     #     radiobutton[0].click()
-#     #     sleep(t_low)
-#     #     count_goods(browser)
-#     #     show_all(browser)
-#     # elements[0].find_element(By.TAG_NAME, "span").click()
-
-#     with open(f"{time_now}_radiobuttons.txt", "a") as file:
-#         file.write("\n")
-
-
 # добавить фильтр по признаку принадлежности к чекбоксу в список для тестирования
 def checkbox_filter_adding(browser):
     elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-1")
@@ -152,11 +119,8 @@ def pairwise_list_making(browser):
 def checkbox_choose(browser, list_):
     list = list_
     elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-1")
-    # elements = browser.find_element(By.CLASS_NAME, "filters-desktop__item--type-1")
 
-    # x = 1
     for elem in elements:
-        # elem = elements
         filter_list = []
         element = elem.find_element(By.TAG_NAME, "h3")
         gr_parent = element.find_element(By.XPATH, "..").find_element(By.XPATH, "..")
@@ -165,9 +129,7 @@ def checkbox_choose(browser, list_):
         for filter_element in list:
             if element.text == filter_element[0]:
                 filter_list.append(filter_element)
-                # print(filter_element)
         
-        # y = 1
         for li in ul:
             checkbox = li.find_elements(By.TAG_NAME, "span")
             checkbox_parent = checkbox[1].text
@@ -178,7 +140,6 @@ def checkbox_choose(browser, list_):
             count = 0
 
             for filter_element in range(lenght):
-                # print(f"x={x} y={y} count={count} lenght={lenght}")
 
                 if filter_list[count][1] == parent_text:
                     action = ""
@@ -187,16 +148,11 @@ def checkbox_choose(browser, list_):
                         action = "active"
                     else:
                         action = "inactive"
-                    # print(f"{parent_text} = {filter_list[count][1]}, {filter_list[count][0]}, {filter_list[count][2]}")
                     print(f"{filter_list[count][0]} - {filter_list[count][1]} -> {action}")
                 
                     filter_list.pop(count)
-                    # print(filter_list)
                     continue
                 count += 1
-
-        #     y += 1
-        # x += 1
 
 
 # найти и отметить радиобаттон в веб приложении
@@ -216,20 +172,6 @@ def radio_choose(browser, list):
                 if name[1] == radio_name:
                     radio[0].click()
                     print(f"{radio_name} = {name[1]}, {name[0]}")
-
-
-# def filters_count(browser):
-#     filter_name = browser.find_elements(By.XPATH, "//h3[@class='filters-desktop__item-title']")
-#     del filter_name[3]
-#     filters = browser.find_elements(By.CLASS_NAME, "filter__list")
-#     # print(len(filters))
-#     for i in range(len(filters)-1, -1, -1):
-#         print("_____________________________________________________________")
-#         # filters = browser.find_elements(By.CLASS_NAME, "filter__list")
-#         if filter_type(filters[i]) == "checkbox":
-#             filter_checkbox(browser, filters[i])
-#         else:
-#             filter_radiobutton(filter_name[i].text, browser, filters[i])
 
 
 # кнопка "Показать" в модальном окне
