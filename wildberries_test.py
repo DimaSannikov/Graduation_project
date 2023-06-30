@@ -13,11 +13,13 @@ now = datetime.now()
 time_now = now.strftime("%H:%M")
 
 
+# сохранить куи файлы
 def cookies_download(browser):
     with open(f"WB_cookies.pkl", 'wb') as file:
         pickle.dump(browser.get_cookies(), file)
 
 
+# загрузить куки файлы
 def cookies_upload(browser, URL):
     # if path.exists(f"{vk_phone}_cookies.pkl"):
     browser.get(URL)
@@ -36,11 +38,13 @@ def hover_profile(browser):
     sleep(t_low)
 
 
+# нажать кнопку "Все фильтры"
 def open_filter(browser):
     filter = browser.find_elements(By.CLASS_NAME, "dropdown-filter__btn")[-1]
     filter.click()
 
 
+# показать все элементы в модальном окне с фильтрами - веб элемент "Показать все"
 def show_all(browser):
     all_goods = browser.find_elements(By.CLASS_NAME, "filter__show-all")
     for button in all_goods:
@@ -48,6 +52,7 @@ def show_all(browser):
         sleep(t_micro)
 
 
+# найти количество товаров, найденных в модальном окне "Нашли 'N' товаров"
 def count_goods(browser):
     goods = browser.find_element(By.XPATH, "//p[@class='filters-desktop__count-goods']")
     sleep(t_low)
@@ -87,6 +92,7 @@ def count_goods(browser):
 #         file.write("\n")
 
 
+# добавить фильтр по признаку принадлежности к чекбоксу в список для тестирования
 def checkbox_filter_adding(browser):
     elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-1")
     for element in elements:
@@ -111,6 +117,7 @@ def checkbox_filter_adding(browser):
             file.write("\n")
 
 
+# добавить фильтр по признаку принадлежности к радиобаттону в список для тестирования
 def radio_filter_adding(browser):
     elements = browser.find_elements(
         By.CLASS_NAME, "filters-desktop__item--type-7")
@@ -135,11 +142,13 @@ def radio_filter_adding(browser):
             file.write("\n")
 
 
+# объединение двух предыдущих функций, для последующего вывода
 def pairwise_list_making(browser):
         checkbox_filter_adding(browser)
         radio_filter_adding(browser)
 
 
+# найти и отметить чекбокс в веб приложении
 def checkbox_choose(browser, list_):
     list = list_
     elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-1")
@@ -190,6 +199,7 @@ def checkbox_choose(browser, list_):
         # x += 1
 
 
+# найти и отметить радиобаттон в веб приложении
 def radio_choose(browser, list):
     elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-7")
 
@@ -222,11 +232,13 @@ def radio_choose(browser, list):
 #             filter_radiobutton(filter_name[i].text, browser, filters[i])
 
 
+# кнопка "Показать" в модальном окне
 def show_button_click(browser):
     button = browser.find_element(By.CLASS_NAME, "filters-desktop__btn-main")
     button.click()
 
 
+# собираем ряд предыдущих функций для тестирования
 def site_testing(browser):
     # for i in range(1, lists_of_testing()):
     for i in range(1, 2):
@@ -243,4 +255,75 @@ def site_testing(browser):
         count_goods(browser)
         show_button_click(browser)
 
-# site_testing()
+
+# открываем таблицу созданную Pairwise Pict Online и созданный ранее переводчик
+def translated_list():
+    array = []
+    translate = []
+
+    with open("translate_for_test.txt", "r") as file:
+        for line in file:
+            line = line.replace("\n", "")
+            line = line.split("\t")
+            translate.append(line)
+
+    with open("pairwise.txt", "r") as file:
+        for line in file:
+            line = line.replace("\n", "")
+            line = line.split("\t")
+            array.append(line)
+
+    return array, translate
+
+
+# построчно записываем в список все строки из pairwise.txt с учетом перевода из translate_for_test.txt
+def test_list(array, translate):
+    new_array = []
+
+    for line in array:
+        new_line = []
+        for element in line:
+            for elem in translate:
+                test_array = []
+
+                if element == elem[0]:
+                    test_array.append(elem[1].split("_")[0])
+                    test_array.append(elem[1].split("_")[1])
+                    new_line.append(test_array)
+                    # print(new_line)
+                
+                elif element == elem[0].split("_")[0]:
+                    test_array.append(elem[1].split("_")[0])
+                    if test_array not in new_line:
+                        new_line.append(test_array)
+                
+                elif element == elem[0].split("_")[1]:
+                    if test_array not in new_line:
+                        new_line.append(elem[1].split("_")[1])
+
+            if len(element) == 1:
+                new_line.append(element)
+
+        new_array.append(new_line)
+    return new_array
+
+
+# сопоставляем первую строчку файла pairwise.txt (названя элементов веб приложения) с последующими (тесты), и записываем отдельно в файлы
+def lists_of_testing():
+    array, translate = translated_list()
+    new_array = test_list(array, translate)
+
+    for line in range(1, len(new_array)):
+        count = 0
+        for element in new_array[line]:
+            if len(new_array[0][count]) == 2:
+                print(f"{new_array[0][count][0]}_{new_array[0][count][1]}_{element}")
+                with open(f"testlists/ready_for_test_{line}.txt", "a") as file:
+                    file.writelines(f"{new_array[0][count][0]}_{new_array[0][count][1]}_{element}\n")
+            else:
+                print(f"{new_array[0][count][0]}_{element}")
+                with open(f"testlists/ready_for_test_{line}.txt", "a") as file:
+                    file.writelines(f"{new_array[0][count][0]}_{element}\n")
+            count += 1
+
+    return len(new_array)
