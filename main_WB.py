@@ -30,13 +30,10 @@ try:
     browser.get(url)
     sleep(t_low)
 
-    wb.open_filter(browser)
-    sleep(t_low)
-
     # wb.show_all(browser)
     # sleep(t_low)
 
-    wb.site_testing(browser)
+    wb.site_testing(browser, 4)
     sleep(t_low)
 
 finally:

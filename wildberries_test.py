@@ -74,7 +74,7 @@ def checkbox_filter_adding(browser):
                 By.TAG_NAME, "span")[1].find_element(By.TAG_NAME, "span").text
             parent_text = checkbox.replace(checkbox_child, '').replace(' ', '')
             
-            with open(f"{time_now}_checkboxes.txt", "a") as file:
+            with open("checkboxes.txt", "a") as file:
                 file.writelines(f"{filter_name}_{parent_text}: ")
                 file.write("\n")
             
@@ -94,7 +94,7 @@ def radio_filter_adding(browser):
             By.CLASS_NAME, "filter__list").find_elements(By.TAG_NAME, "li")
         filter_name = element.find_element(By.TAG_NAME, "h3").text
         
-        with open(f"{time_now}_radiobuttons.txt", "a") as file:
+        with open("radiobuttons.txt", "a") as file:
             file.writelines(f"{filter_name}: ")
             print(filter_name)
         
@@ -146,9 +146,10 @@ def checkbox_choose(browser, list_):
                     if filter_list[count][2] == "a":
                         checkbox[0].click()
                         action = "active"
+                        print(f"{filter_list[count][0]} - {filter_list[count][1]} -> {action}")
                     else:
                         action = "inactive"
-                    print(f"{filter_list[count][0]} - {filter_list[count][1]} -> {action}")
+                    # print(f"{filter_list[count][0]} - {filter_list[count][1]} -> {action}")
                 
                     filter_list.pop(count)
                     continue
@@ -181,21 +182,23 @@ def show_button_click(browser):
 
 
 # собираем ряд предыдущих функций для тестирования
-def site_testing(browser):
-    # for i in range(1, lists_of_testing()):
-    for i in range(1, 2):
-        list = []
+def site_testing(browser, test_num=1):
+    list = []
 
-        with open(f"testlists/ready_for_test_{i}.txt", "r") as file:
-            for line in file:
-                line = line.strip().split("_")
-                list.append(line)
-        
-        count_goods(browser)
-        checkbox_choose(browser, list)
-        radio_choose(browser, list)
-        count_goods(browser)
-        show_button_click(browser)
+    with open(f"testlists/ready_for_test_{test_num}.txt", "r") as file:
+        for line in file:
+            line = line.strip().split("_")
+            list.append(line)
+    
+    open_filter(browser)
+    sleep(t_low)
+    count_goods(browser)
+    checkbox_choose(browser, list)
+    radio_choose(browser, list)
+    count_goods(browser)
+    sleep(t_low)
+    show_button_click(browser)
+    sleep(t_low)
 
 
 # открываем таблицу созданную Pairwise Pict Online и созданный ранее переводчик
