@@ -5,7 +5,7 @@ with open("checkboxes.txt", "r") as file:
     for line in file:
         array.append(line.rstrip())
 
-with open("translit_new.txt", "r") as fl:
+with open("translit.txt", "r") as fl:
     for ln in fl:
 
         edit_letters.append(ln.rstrip())
