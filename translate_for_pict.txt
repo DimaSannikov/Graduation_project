@@ -1,21 +1,23 @@
 Bre_O'STIN: a, i
 Bre_oodji: a, i
 Bre_Zolla: a, i
+Bre_Gloria Jeans: a, i
 Bre_Modis: a, i
 Bre_Befree: a, i
 Bre_TVOE: a, i
-Bre_GUESS: a, i
 Pro_Wildberries: a, i
 Pro_OSTIN OOO: a, i
 Pro_oodji: a, i
 Pro_Zolla: a, i
 Pro_MELON FASHION GROUP: a, i
+Pro_AO GLORIYa DZhINS: a, i
 Pro_MODIS: a, i
-Pro_OOO Sportmaster: a, i
 Raz_1: a, i
+Raz_2: a, i
 Raz_3: a, i
+Raz_4: a, i
 Raz_23: a, i
-Raz_24: a, i
+Raz_: a, i
 Raz_30: a, i
 Raz_31: a, i
 Raz_32: a, i
@@ -85,12 +87,10 @@ Raz_96: a, i
 Raz_97: a, i
 Raz_98: a, i
 Raz_104: a, i
-Raz_110: a, i
-Raz_116: a, i
 Sos_akril: a, i
 Sos_bayka: a, i
 Sos_bambuk: a, i
-Sos_vel'vet: a, i
+Sos_vel"vet: a, i
 Sos_viskoza: a, i
 Sos_laykra: a, i
 Sos_len: a, i
@@ -101,12 +101,12 @@ Sos_poliuretan: a, i
 Sos_poliester: a, i
 Sos_poliefir: a, i
 Sos_spandeks: a, i
-Sos_tekstil': a, i
-Sos_flanel': a, i
+Sos_tekstil": a, i
+Sos_flanel": a, i
 Sos_flis: a, i
 Sos_khlopok: a, i
-Sos_sherst': a, i
-Sos_shtapel': a, i
+Sos_sherst": a, i
+Sos_shtapel": a, i
 Sos_elastan: a, i
 Tip_bez karmanov: a, i
 Tip_v shve: a, i
@@ -115,9 +115,10 @@ Tip_nakladnye: a, i
 Tip_potaynye: a, i
 Tip_proreznye: a, i
 Tip_s klapanom: a, i
-Naz_bol'shie razmery: a, i
+Naz_bol"shie razmery: a, i
 Naz_vechernyaya moda: a, i
 Naz_vypusknoy: a, i
+Naz_dlya beremennykh: a, i
 Naz_dlya kreshcheniya: a, i
 Naz_domashnyaya odezhda: a, i
 Naz_na vypisku: a, i
@@ -126,7 +127,7 @@ Naz_ofis: a, i
 Naz_plyazh: a, i
 Naz_povsednevnaya: a, i
 Naz_poslerodovoe: a, i
-Naz_svad'ba: a, i
+Naz_svad"ba: a, i
 Naz_sport: a, i
 Naz_shkola: a, i
 Vid_bez zastezhki: a, i
@@ -136,31 +137,31 @@ Vid_lipuchka: a, i
 Vid_molniya: a, i
 Vid_pugovitsy: a, i
 Vid_shnurovka: a, i
-Ukh_gladit' na nizkoy temperature: a, i
-Ukh_gladit' pri t ne bolee 100oC: a, i
-Ukh_gladit' pri t ne bolee 110oC: a, i
-Ukh_gladit' pri t ne bolee 130oC: a, i
-Ukh_gladit' pri t ne bolee 150oC: a, i
-Ukh_gladit' pri t ne bolee 90oC: a, i
-Ukh_gladit' pri t utyuga do 200oC: a, i
-Ukh_gladit' s iznanki: a, i
+Ukh_gladit" na nizkoy temperature: a, i
+Ukh_gladit" pri t ne bolee 100oC: a, i
+Ukh_gladit" pri t ne bolee 110oC: a, i
+Ukh_gladit" pri t ne bolee 130oC: a, i
+Ukh_gladit" pri t ne bolee 150oC: a, i
+Ukh_gladit" pri t ne bolee 90oC: a, i
+Ukh_gladit" pri t utyuga do 200oC: a, i
+Ukh_gladit" s iznanki: a, i
 Ukh_delikatnaya stirka: a, i
 Ukh_delikatnaya khimicheskaya chistka: a, i
 Ukh_delikatnyy otzhim: a, i
 Ukh_dopuskaetsya otparivanie: a, i
+Ukh_ne gladit": a, i
 Ukh_otbelivanie zapreshcheno: a, i
 Ukh_otzhim zapreshchen: a, i
 Ukh_ruchnaya stirka: a, i
-Ukh_stirat' iznankoy naruzhu: a, i
+Ukh_stirat" iznankoy naruzhu: a, i
 Ukh_stirka pri t ne bolee 30oC: a, i
 Ukh_stirka pri t ne bolee 40oC: a, i
 Ukh_stirka pri t ne bolee 50oC: a, i
 Ukh_stirka pri t ne bolee 60S: a, i
-Ukh_sukhaya chistka: a, i
-Ukh_sushka v vertikal'nom polozhenii: a, i
-Ukh_sushka v gorizontal'nom polozhenii: a, i
-Ukh_sushka v sushil'noy mashine: a, i
+Ukh_sushka v vertikal"nom polozhenii: a, i
+Ukh_sushka v gorizontal"nom polozhenii: a, i
+Ukh_sushka v sushil"noy mashine: a, i
 Ukh_khimicheskaya chistka: a, i
 Ukh_khimicheskaya chistka zapreshchena: a, i
-Srok dostavki: Lyuboy, 1 den', 2 dnya, do 3 dney, do 5 dney
-Skidka: Lyubaya, ot 10% i vyshe, ot 30% i vyshe, ot 50% i vyshe, ot 70% i vyshe
+Srok dostavki: Lyuboy, 1 den", 2 dnya, do 3 dney, do 5 dney
+Skidka: Lyubaya, ot 10` i vyshe, ot 30` i vyshe, ot 50` i vyshe, ot 70` i vyshe

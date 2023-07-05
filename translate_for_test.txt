@@ -1,21 +1,23 @@
 Bre_O'STIN	Бренд_O'STIN
 Bre_oodji	Бренд_oodji
 Bre_Zolla	Бренд_Zolla
+Bre_Gloria Jeans	Бренд_Gloria Jeans
 Bre_Modis	Бренд_Modis
 Bre_Befree	Бренд_Befree
 Bre_TVOE	Бренд_ТВОЕ
-Bre_GUESS	Бренд_GUESS
 Pro_Wildberries	Продавец_Wildberries
 Pro_OSTIN OOO	Продавец_ОСТИН ООО
 Pro_oodji	Продавец_oodji
 Pro_Zolla	Продавец_Zolla
 Pro_MELON FASHION GROUP	Продавец_MELON FASHION GROUP
+Pro_AO GLORIYa DZhINS	Продавец_АО ГЛОРИЯ ДЖИНС
 Pro_MODIS	Продавец_MODIS
-Pro_OOO Sportmaster	Продавец_ООО Спортмастер
 Raz_1	Размер_1
+Raz_2	Размер_2
 Raz_3	Размер_3
+Raz_4	Размер_4
 Raz_23	Размер_23
-Raz_24	Размер_24
+Raz_	Размер_
 Raz_30	Размер_30
 Raz_31	Размер_31
 Raz_32	Размер_32
@@ -85,12 +87,10 @@ Raz_96	Размер_96
 Raz_97	Размер_97
 Raz_98	Размер_98
 Raz_104	Размер_104
-Raz_110	Размер_110
-Raz_116	Размер_116
 Sos_akril	Состав_акрил
 Sos_bayka	Состав_байка
 Sos_bambuk	Состав_бамбук
-Sos_vel'vet	Состав_вельвет
+Sos_vel"vet	Состав_вельвет
 Sos_viskoza	Состав_вискоза
 Sos_laykra	Состав_лайкра
 Sos_len	Состав_лен
@@ -101,12 +101,12 @@ Sos_poliuretan	Состав_полиуретан
 Sos_poliester	Состав_полиэстер
 Sos_poliefir	Состав_полиэфир
 Sos_spandeks	Состав_спандекс
-Sos_tekstil'	Состав_текстиль
-Sos_flanel'	Состав_фланель
+Sos_tekstil"	Состав_текстиль
+Sos_flanel"	Состав_фланель
 Sos_flis	Состав_флис
 Sos_khlopok	Состав_хлопок
-Sos_sherst'	Состав_шерсть
-Sos_shtapel'	Состав_штапель
+Sos_sherst"	Состав_шерсть
+Sos_shtapel"	Состав_штапель
 Sos_elastan	Состав_эластан
 Tip_bez karmanov	Тип карманов_без карманов
 Tip_v shve	Тип карманов_в шве
@@ -115,9 +115,10 @@ Tip_nakladnye	Тип карманов_накладные
 Tip_potaynye	Тип карманов_потайные
 Tip_proreznye	Тип карманов_прорезные
 Tip_s klapanom	Тип карманов_с клапаном
-Naz_bol'shie razmery	Назначение_большие размеры
+Naz_bol"shie razmery	Назначение_большие размеры
 Naz_vechernyaya moda	Назначение_вечерняя мода
 Naz_vypusknoy	Назначение_выпускной
+Naz_dlya beremennykh	Назначение_для беременных
 Naz_dlya kreshcheniya	Назначение_для крещения
 Naz_domashnyaya odezhda	Назначение_домашняя одежда
 Naz_na vypisku	Назначение_на выписку
@@ -126,7 +127,7 @@ Naz_ofis	Назначение_офис
 Naz_plyazh	Назначение_пляж
 Naz_povsednevnaya	Назначение_повседневная
 Naz_poslerodovoe	Назначение_послеродовое
-Naz_svad'ba	Назначение_свадьба
+Naz_svad"ba	Назначение_свадьба
 Naz_sport	Назначение_спорт
 Naz_shkola	Назначение_школа
 Vid_bez zastezhki	Вид застежки_без застежки
@@ -136,39 +137,39 @@ Vid_lipuchka	Вид застежки_липучка
 Vid_molniya	Вид застежки_молния
 Vid_pugovitsy	Вид застежки_пуговицы
 Vid_shnurovka	Вид застежки_шнуровка
-Ukh_gladit' na nizkoy temperature	Уход за вещами_гладить на низкой температуре
-Ukh_gladit' pri t ne bolee 100oC	Уход за вещами_гладить при t не более 100°C
-Ukh_gladit' pri t ne bolee 110oC	Уход за вещами_гладить при t не более 110°C
-Ukh_gladit' pri t ne bolee 130oC	Уход за вещами_гладить при t не более 130°C
-Ukh_gladit' pri t ne bolee 150oC	Уход за вещами_гладить при t не более 150°C
-Ukh_gladit' pri t ne bolee 90oC	Уход за вещами_гладить при t не более 90°C
-Ukh_gladit' pri t utyuga do 200oC	Уход за вещами_гладить при t утюга до 200°C
-Ukh_gladit' s iznanki	Уход за вещами_гладить с изнанки
+Ukh_gladit" na nizkoy temperature	Уход за вещами_гладить на низкой температуре
+Ukh_gladit" pri t ne bolee 100oC	Уход за вещами_гладить при t не более 100°C
+Ukh_gladit" pri t ne bolee 110oC	Уход за вещами_гладить при t не более 110°C
+Ukh_gladit" pri t ne bolee 130oC	Уход за вещами_гладить при t не более 130°C
+Ukh_gladit" pri t ne bolee 150oC	Уход за вещами_гладить при t не более 150°C
+Ukh_gladit" pri t ne bolee 90oC	Уход за вещами_гладить при t не более 90°C
+Ukh_gladit" pri t utyuga do 200oC	Уход за вещами_гладить при t утюга до 200°C
+Ukh_gladit" s iznanki	Уход за вещами_гладить с изнанки
 Ukh_delikatnaya stirka	Уход за вещами_деликатная стирка
 Ukh_delikatnaya khimicheskaya chistka	Уход за вещами_деликатная химическая чистка
 Ukh_delikatnyy otzhim	Уход за вещами_деликатный отжим
 Ukh_dopuskaetsya otparivanie	Уход за вещами_допускается отпаривание
+Ukh_ne gladit"	Уход за вещами_не гладить
 Ukh_otbelivanie zapreshcheno	Уход за вещами_отбеливание запрещено
 Ukh_otzhim zapreshchen	Уход за вещами_отжим запрещен
 Ukh_ruchnaya stirka	Уход за вещами_ручная стирка
-Ukh_stirat' iznankoy naruzhu	Уход за вещами_стирать изнанкой наружу
+Ukh_stirat" iznankoy naruzhu	Уход за вещами_стирать изнанкой наружу
 Ukh_stirka pri t ne bolee 30oC	Уход за вещами_стирка при t не более 30°C
 Ukh_stirka pri t ne bolee 40oC	Уход за вещами_стирка при t не более 40°C
 Ukh_stirka pri t ne bolee 50oC	Уход за вещами_стирка при t не более 50°C
 Ukh_stirka pri t ne bolee 60S	Уход за вещами_стирка при t не более 60С
-Ukh_sukhaya chistka	Уход за вещами_сухая чистка
-Ukh_sushka v vertikal'nom polozhenii	Уход за вещами_сушка в вертикальном положении
-Ukh_sushka v gorizontal'nom polozhenii	Уход за вещами_сушка в горизонтальном положении
-Ukh_sushka v sushil'noy mashine	Уход за вещами_сушка в сушильной машине
+Ukh_sushka v vertikal"nom polozhenii	Уход за вещами_сушка в вертикальном положении
+Ukh_sushka v gorizontal"nom polozhenii	Уход за вещами_сушка в горизонтальном положении
+Ukh_sushka v sushil"noy mashine	Уход за вещами_сушка в сушильной машине
 Ukh_khimicheskaya chistka	Уход за вещами_химическая чистка
 Ukh_khimicheskaya chistka zapreshchena	Уход за вещами_химическая чистка запрещена
 Srok dostavki_Lyuboy	Срок доставки_Любой
-Srok dostavki_1 den'	Срок доставки_1 день
+Srok dostavki_1 den"	Срок доставки_1 день
 Srok dostavki_2 dnya	Срок доставки_2 дня
 Srok dostavki_do 3 dney	Срок доставки_до 3 дней
 Srok dostavki_do 5 dney	Срок доставки_до 5 дней
 Skidka_Lyubaya	Скидка_Любая
-Skidka_ot 10% i vyshe	Скидка_от 10% и выше
-Skidka_ot 30% i vyshe	Скидка_от 30% и выше
-Skidka_ot 50% i vyshe	Скидка_от 50% и выше
-Skidka_ot 70% i vyshe	Скидка_от 70% и выше
+Skidka_ot 10` i vyshe	Скидка_от 10% и выше
+Skidka_ot 30` i vyshe	Скидка_от 30% и выше
+Skidka_ot 50` i vyshe	Скидка_от 50% и выше
+Skidka_ot 70` i vyshe	Скидка_от 70% и выше

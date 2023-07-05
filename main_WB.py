@@ -33,7 +33,7 @@ try:
     # wb.show_all(browser)
     # sleep(t_low)
 
-    wb.site_testing(browser, 4)
+    wb.site_testing(browser, 1)
     sleep(t_low)
 
 finally:

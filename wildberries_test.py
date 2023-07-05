@@ -3,6 +3,9 @@ from time import sleep
 from selenium.webdriver import ActionChains
 import pickle
 from datetime import datetime
+from pict_list_checkboxes import list_checkboxes
+from pict_list_radio import list_radio
+import os
 
 t_micro = 1
 t_low = 3
@@ -62,6 +65,8 @@ def count_goods(browser):
 # добавить фильтр по признаку принадлежности к чекбоксу в список для тестирования
 def checkbox_filter_adding(browser):
     elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-1")
+    with open("checkboxes.txt", "w") as file:
+        file.writelines("")
     for element in elements:
         filter_list = element.find_element(
             By.CLASS_NAME, "filter__list").find_elements(By.TAG_NAME, "li")
@@ -80,7 +85,7 @@ def checkbox_filter_adding(browser):
             
             print(f"{filter_name}_{parent_text}")
 
-        with open(f"{time_now}_checkboxes.txt", "a") as file:
+        with open(f"checkboxes.txt", "a") as file:
             file.write("\n")
 
 
@@ -88,6 +93,8 @@ def checkbox_filter_adding(browser):
 def radio_filter_adding(browser):
     elements = browser.find_elements(
         By.CLASS_NAME, "filters-desktop__item--type-7")
+    with open("radiobuttons.txt", "w") as file:
+        file.writelines("")
     
     for element in elements:
         filter_list = element.find_element(
@@ -101,18 +108,24 @@ def radio_filter_adding(browser):
         for i in range(0, len(filter_list)):
             radiobutton = filter_list[i].find_elements(By.TAG_NAME, "span")[1]
 
-            with open(f"{time_now}_radiobuttons.txt", "a") as file:
+            with open(f"radiobuttons.txt", "a") as file:
                 file.writelines(f"{radiobutton.text}, ")
             print(f"{radiobutton.text}, ")
 
-        with open(f"{time_now}_radiobuttons.txt", "a") as file:
+        with open(f"radiobuttons.txt", "a") as file:
             file.write("\n")
 
 
 # объединение двух предыдущих функций, для последующего вывода
 def pairwise_list_making(browser):
-        checkbox_filter_adding(browser)
-        radio_filter_adding(browser)
+    checkbox_filter_adding(browser)
+    radio_filter_adding(browser)
+
+    with open("translate_for_pict.txt", "w") as file:
+        file.writelines("")
+    
+    list_checkboxes()
+    list_radio()
 
 
 # найти и отметить чекбокс в веб приложении
@@ -257,6 +270,10 @@ def test_list(array, translate):
 def lists_of_testing():
     array, translate = translated_list()
     new_array = test_list(array, translate)
+
+    dir = "testlists"
+    for f in os.listdir(dir):
+        os.remove(os.path.join(dir, f))
 
     for line in range(1, len(new_array)):
         count = 0
