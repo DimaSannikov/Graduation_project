@@ -210,6 +210,7 @@ def site_testing(browser, test_num=1):
     radio_choose(browser, list)
     count_goods(browser)
     sleep(t_low)
+    browser.save_screenshot('Test_WB.png')
     show_button_click(browser)
     sleep(t_low)
 
@@ -279,11 +280,11 @@ def lists_of_testing():
         count = 0
         for element in new_array[line]:
             if len(new_array[0][count]) == 2:
-                print(f"{new_array[0][count][0]}_{new_array[0][count][1]}_{element}")
+                # print(f"{new_array[0][count][0]}_{new_array[0][count][1]}_{element}")
                 with open(f"testlists/ready_for_test_{line}.txt", "a") as file:
                     file.writelines(f"{new_array[0][count][0]}_{new_array[0][count][1]}_{element}\n")
             else:
-                print(f"{new_array[0][count][0]}_{element}")
+                # print(f"{new_array[0][count][0]}_{element}")
                 with open(f"testlists/ready_for_test_{line}.txt", "a") as file:
                     file.writelines(f"{new_array[0][count][0]}_{element}\n")
             count += 1

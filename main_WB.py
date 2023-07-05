@@ -25,16 +25,22 @@ browser.get(url)
 
 
 try:
-    wb.cookies_upload(browser, url)
+    count = wb.lists_of_testing()
+    
+    for num in range(1, count + 1):
 
-    browser.get(url)
-    sleep(t_low)
+        print(f"Тест {num} из {count}")
+        wb.cookies_upload(browser, url)
 
-    # wb.show_all(browser)
-    # sleep(t_low)
+        browser.get(url)
+        sleep(t_low)
 
-    wb.site_testing(browser, 1)
-    sleep(t_low)
+        # wb.show_all(browser)
+        # sleep(t_low)
+    
+        wb.site_testing(browser, num)
+        sleep(t_low)
+        print("\n")
 
 finally:
     browser.close()
