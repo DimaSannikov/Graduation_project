@@ -27,7 +27,8 @@ browser.get(url)
 try:
     count = wb.lists_of_testing()
     
-    for num in range(1, count + 1):
+    # for num in range(1, count + 1):
+    for num in range(1, 3):
 
         print(f"Тест {num} из {count}")
         wb.cookies_upload(browser, url)
@@ -40,6 +41,7 @@ try:
     
         wb.site_testing(browser, num)
         sleep(t_low)
+        browser.save_screenshot(f'screenshots/Result_{num}.png')
         print("\n")
 
 finally:

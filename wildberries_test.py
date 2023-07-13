@@ -3,8 +3,6 @@ from time import sleep
 from selenium.webdriver import ActionChains
 import pickle
 from datetime import datetime
-from pict_list_checkboxes import list_checkboxes
-from pict_list_radio import list_radio
 import os
 
 t_micro = 1
@@ -195,7 +193,7 @@ def show_button_click(browser):
 
 
 # собираем ряд предыдущих функций для тестирования
-def site_testing(browser, test_num=1):
+def site_testing(browser, test_num):
     list = []
 
     with open(f"testlists/ready_for_test_{test_num}.txt", "r") as file:
@@ -210,7 +208,7 @@ def site_testing(browser, test_num=1):
     radio_choose(browser, list)
     count_goods(browser)
     sleep(t_low)
-    browser.save_screenshot('Test_WB.png')
+    browser.save_screenshot(f'screenshots/Filters_{test_num}.png')
     show_button_click(browser)
     sleep(t_low)
 
@@ -290,3 +288,135 @@ def lists_of_testing():
             count += 1
 
     return len(new_array)
+
+
+# приводит список тестов чекбоксов в состояние пригодное для тестирования
+def checkboxes_translit():
+    array = []
+    edit_letters = []
+
+    with open("checkboxes.txt", "r") as file:
+        for line in file:
+            array.append(line.strip())
+
+    with open("translit.txt", "r") as fl:
+        for ln in fl:
+
+            edit_letters.append(ln.strip())
+
+    for line in array:
+
+        translate_line = line
+        for symbol in line:
+
+            for letter in edit_letters:
+                if symbol == letter[0]:
+                    line = line.replace(":", "")
+                    translate_line = translate_line.replace(symbol, letter[2:]).replace(":", "")
+
+        if len(translate_line) != 0:
+            translate_line = translate_line.split("_")[0][0: 3] + "_" + translate_line.split("_")[1]
+            
+            print(f"{translate_line}\t{line}")
+
+            with open("translate_for_test.txt", "a") as file:
+                file.writelines(f"{translate_line}\t{line}")
+                file.write("\n")
+
+
+# приводит список тестов радиобаттонов в состояние пригодное для тестирования
+def radio_translit():
+    array = []
+    edit_letters = []
+
+    with open("radiobuttons.txt", "r") as file:
+        for line in file:
+            array.append(line.rstrip())
+
+    with open("translit.txt", "r") as fl:
+        for ln in fl:
+
+            edit_letters.append(ln.rstrip())
+
+    for line in array:
+
+        translate_line = line
+        for symbol in line:
+
+            for letter in edit_letters:
+                if symbol == letter[0]:
+                    translate_line = translate_line.replace(symbol, letter[2:])
+
+        if len(translate_line) != 0:
+            line = line.rstrip(",").replace(":", ",").split("_")[0].split(", ")
+            translate_line = translate_line.rstrip(",").replace(":", ",").split("_")[0].split(", ")
+            print(f"{translate_line}\t{line}")
+            for i in range(1, len(line)):
+                print(f"{translate_line[0]}_{translate_line[i]}\t{line[0]}_{line[i]}")
+            
+                with open("translate_for_test.txt", "a") as file:
+                    file.writelines(f"{translate_line[0]}_{translate_line[i]}\t{line[0]}_{line[i]}")
+                    file.write("\n")
+
+
+# приводит список тестов чекбоксов в состояние пригодное для использования в pairwise pict online
+def list_checkboxes():
+    array = []
+    edit_letters = []
+
+    with open("checkboxes.txt", "r") as file:
+        for line in file:
+            array.append(line.rstrip())
+
+    with open("translit.txt", "r") as fl:
+        for ln in fl:
+
+            edit_letters.append(ln.rstrip())
+
+    for line in array:
+
+        translate_line = line
+        for symbol in line:
+
+            for letter in edit_letters:
+                if symbol == letter[0]:
+                    translate_line = translate_line.replace(symbol, letter[2:])
+
+        if len(translate_line) != 0:
+            translate_line = translate_line.split("_")[0][0: 3] + "_" + translate_line.split("_")[1]
+            print(f"{translate_line}")
+            
+            with open("translate_for_pict.txt", "a") as file:
+                file.writelines(f"{translate_line} a, i")                      # a - active checkbox, i - inactive
+                file.write("\n")
+
+
+# приводит список тестов радиобаттонов в состояние пригодное для использования в pairwise pict online
+def list_radio():
+    array = []
+    edit_letters = []
+
+    with open("radiobuttons.txt", "r") as file:
+        for line in file:
+            array.append(line.rstrip())
+
+    with open("translit.txt", "r") as fl:
+        for ln in fl:
+
+            edit_letters.append(ln.rstrip())
+
+    for line in array:
+
+        translate_line = line
+        for symbol in line:
+
+            for letter in edit_letters:
+                if symbol == letter[0]:
+                    translate_line = translate_line.replace(symbol, letter[2:]).strip(",")
+
+        if len(translate_line) != 0:
+            print(f"{translate_line}")
+
+            with open("translate_for_pict.txt", "a") as file:
+                file.writelines(f"{translate_line}")
+                file.write("\n")

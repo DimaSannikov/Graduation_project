@@ -3,8 +3,8 @@ Bre_oodji: a, i
 Bre_Zolla: a, i
 Bre_Gloria Jeans: a, i
 Bre_Modis: a, i
-Bre_Befree: a, i
-Bre_TVOE: a, i
+Bre_GUESS: a, i
+Bre_ZARINA: a, i
 Pro_Wildberries: a, i
 Pro_OSTIN OOO: a, i
 Pro_oodji: a, i
@@ -16,8 +16,10 @@ Raz_1: a, i
 Raz_2: a, i
 Raz_3: a, i
 Raz_4: a, i
+Raz_5: a, i
+Raz_6: a, i
 Raz_23: a, i
-Raz_: a, i
+Raz_24: a, i
 Raz_30: a, i
 Raz_31: a, i
 Raz_32: a, i
@@ -85,8 +87,6 @@ Raz_94: a, i
 Raz_95: a, i
 Raz_96: a, i
 Raz_97: a, i
-Raz_98: a, i
-Raz_104: a, i
 Sos_akril: a, i
 Sos_bayka: a, i
 Sos_bambuk: a, i
@@ -141,6 +141,7 @@ Ukh_gladit" na nizkoy temperature: a, i
 Ukh_gladit" pri t ne bolee 100oC: a, i
 Ukh_gladit" pri t ne bolee 110oC: a, i
 Ukh_gladit" pri t ne bolee 130oC: a, i
+Ukh_gladit" pri t ne bolee 140oC: a, i
 Ukh_gladit" pri t ne bolee 150oC: a, i
 Ukh_gladit" pri t ne bolee 90oC: a, i
 Ukh_gladit" pri t utyuga do 200oC: a, i
@@ -149,18 +150,18 @@ Ukh_delikatnaya stirka: a, i
 Ukh_delikatnaya khimicheskaya chistka: a, i
 Ukh_delikatnyy otzhim: a, i
 Ukh_dopuskaetsya otparivanie: a, i
-Ukh_ne gladit": a, i
 Ukh_otbelivanie zapreshcheno: a, i
 Ukh_otzhim zapreshchen: a, i
 Ukh_ruchnaya stirka: a, i
 Ukh_stirat" iznankoy naruzhu: a, i
+Ukh_stirat" otdel"no: a, i
 Ukh_stirka pri t ne bolee 30oC: a, i
 Ukh_stirka pri t ne bolee 40oC: a, i
 Ukh_stirka pri t ne bolee 50oC: a, i
-Ukh_stirka pri t ne bolee 60S: a, i
 Ukh_sushka v vertikal"nom polozhenii: a, i
 Ukh_sushka v gorizontal"nom polozhenii: a, i
 Ukh_sushka v sushil"noy mashine: a, i
+Ukh_sushka zapreshchena: a, i
 Ukh_khimicheskaya chistka: a, i
 Ukh_khimicheskaya chistka zapreshchena: a, i
 Srok dostavki: Lyuboy, 1 den", 2 dnya, do 3 dney, do 5 dney
