@@ -23,7 +23,6 @@ t_high = 10
 url = "https://www.wildberries.ru/catalog/muzhchinam/odezhda/rubashki"
 browser.get(url)
 
-
 try:
     count = wb.lists_of_testing()
     

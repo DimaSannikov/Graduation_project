@@ -301,11 +301,9 @@ def checkboxes_translit():
 
     with open("translit.txt", "r") as fl:
         for ln in fl:
-
             edit_letters.append(ln.strip())
 
     for line in array:
-
         translate_line = line
         for symbol in line:
 
@@ -335,11 +333,9 @@ def radio_translit():
 
     with open("translit.txt", "r") as fl:
         for ln in fl:
-
             edit_letters.append(ln.rstrip())
 
     for line in array:
-
         translate_line = line
         for symbol in line:
 
@@ -370,7 +366,6 @@ def list_checkboxes():
 
     with open("translit.txt", "r") as fl:
         for ln in fl:
-
             edit_letters.append(ln.rstrip())
 
     for line in array:
@@ -387,7 +382,7 @@ def list_checkboxes():
             print(f"{translate_line}")
             
             with open("translate_for_pict.txt", "a") as file:
-                file.writelines(f"{translate_line} a, i")                      # a - active checkbox, i - inactive
+                file.writelines(f"{translate_line} a, i")        # a - active checkbox, i - inactive
                 file.write("\n")
 
 
@@ -402,11 +397,9 @@ def list_radio():
 
     with open("translit.txt", "r") as fl:
         for ln in fl:
-
             edit_letters.append(ln.rstrip())
 
     for line in array:
-
         translate_line = line
         for symbol in line:
 
