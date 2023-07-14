@@ -1,6 +1,7 @@
 from selenium import webdriver
 from time import sleep
 import wildberries_test as wb
+from url import url
 
 # option = webdriver.ChromeOptions()
 option = webdriver.FirefoxOptions()
@@ -20,7 +21,7 @@ t_low = 3
 t_medium = 5
 t_high = 10
 
-url = "https://www.wildberries.ru/catalog/muzhchinam/odezhda/rubashki"
+url = url
 browser.get(url)
 
 try:

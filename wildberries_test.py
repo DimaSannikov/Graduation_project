@@ -65,12 +65,15 @@ def checkbox_filter_adding(browser):
     elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-1")
     with open("checkboxes.txt", "w") as file:
         file.writelines("")
+
+    count_list_name = 1
     for element in elements:
         filter_list = element.find_element(
             By.CLASS_NAME, "filter__list").find_elements(By.TAG_NAME, "li")
         filter_name = element.find_element(By.TAG_NAME, "h3").text
         print(filter_name)
 
+        count_filter_name = 1
         for filter in filter_list:
             checkbox = filter.find_elements(By.TAG_NAME, "span")[1].text
             checkbox_child = filter.find_elements(
@@ -78,11 +81,12 @@ def checkbox_filter_adding(browser):
             parent_text = checkbox.replace(checkbox_child, '').replace(' ', '')
             
             with open("checkboxes.txt", "a") as file:
-                file.writelines(f"{filter_name}_{parent_text}: ")
+                file.writelines(f"{count_list_name}_{filter_name}_{count_filter_name}_{parent_text}: ")
                 file.write("\n")
-            
-            print(f"{filter_name}_{parent_text}")
-
+            count_filter_name += 1
+            print(f"{count_list_name}_{filter_name}_{count_filter_name}_{parent_text}")
+        count_list_name += 1
+        
         with open(f"checkboxes.txt", "a") as file:
             file.write("\n")
 
@@ -314,7 +318,6 @@ def checkboxes_translit():
 
         if len(translate_line) != 0:
             translate_line = translate_line.split("_")[0][0: 3] + "_" + translate_line.split("_")[1]
-            
             print(f"{translate_line}\t{line}")
 
             with open("translate_for_test.txt", "a") as file:
@@ -369,20 +372,24 @@ def list_checkboxes():
             edit_letters.append(ln.rstrip())
 
     for line in array:
-
         translate_line = line
         for symbol in line:
 
             for letter in edit_letters:
                 if symbol == letter[0]:
+                    line = line.replace(":", "")
                     translate_line = translate_line.replace(symbol, letter[2:])
 
         if len(translate_line) != 0:
-            translate_line = translate_line.split("_")[0][0: 3] + "_" + translate_line.split("_")[1]
-            print(f"{translate_line}")
+            translate_line = translate_line.split("_")[0] + "_" + translate_line.split("_")[2]
+            print(f"{translate_line}\t{line}")
             
             with open("translate_for_pict.txt", "a") as file:
-                file.writelines(f"{translate_line} a, i")        # a - active checkbox, i - inactive
+                file.writelines(f"{translate_line}: a, i")        # a - active checkbox, i - inactive
+                file.write("\n")
+
+            with open("translate_for_test.txt", "a") as file:
+                file.writelines(f"{translate_line}\t{line}")
                 file.write("\n")
 
 
@@ -413,3 +420,13 @@ def list_radio():
             with open("translate_for_pict.txt", "a") as file:
                 file.writelines(f"{translate_line}")
                 file.write("\n")
+
+            line = line.rstrip(",").replace(":", ",").split("_")[0].split(", ")
+            translate_line = translate_line.rstrip(",").replace(":", ",").split("_")[0].split(", ")
+            print(f"{translate_line}\t{line}")
+            for i in range(1, len(line)):
+                print(f"{translate_line[0]}_{translate_line[i]}\t{line[0]}_{line[i]}")
+            
+                with open("translate_for_test.txt", "a") as file:
+                    file.writelines(f"{translate_line[0]}_{translate_line[i]}\t{line[0]}_{line[i]}")
+                    file.write("\n")
