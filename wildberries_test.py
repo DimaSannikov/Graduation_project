@@ -90,9 +90,11 @@ def checkbox_filter_adding(browser):
         with open(f"checkboxes.txt", "a") as file:
             file.write("\n")
 
+    return count_list_name
+
 
 # добавить фильтр по признаку принадлежности к радиобаттону в список для тестирования
-def radio_filter_adding(browser):
+def radio_filter_adding(browser, count_list_name):
     elements = browser.find_elements(
         By.CLASS_NAME, "filters-desktop__item--type-7")
     with open("radiobuttons.txt", "w") as file:
@@ -104,28 +106,37 @@ def radio_filter_adding(browser):
         filter_name = element.find_element(By.TAG_NAME, "h3").text
         
         with open("radiobuttons.txt", "a") as file:
-            file.writelines(f"{filter_name}: ")
-            print(filter_name)
+            file.writelines(f"{count_list_name}_{filter_name}: ")
+
+        print(f"{count_list_name}_{filter_name}")
         
+        count_filter_name = 1
         for i in range(0, len(filter_list)):
             radiobutton = filter_list[i].find_elements(By.TAG_NAME, "span")[1]
 
             with open(f"radiobuttons.txt", "a") as file:
-                file.writelines(f"{radiobutton.text}, ")
-            print(f"{radiobutton.text}, ")
+                file.writelines(f"{count_filter_name}_{radiobutton.text}, ")
+            print(f"{count_filter_name}_{radiobutton.text}, ")
+            count_filter_name += 1
 
         with open(f"radiobuttons.txt", "a") as file:
             file.write("\n")
+        count_list_name += 1
+
+    return count_list_name
 
 
 # объединение двух предыдущих функций, для последующего вывода
 def pairwise_list_making(browser):
-    checkbox_filter_adding(browser)
-    radio_filter_adding(browser)
+    count_list_name = checkbox_filter_adding(browser)
+    radio_filter_adding(browser, count_list_name)
 
     with open("translate_for_pict.txt", "w") as file:
         file.writelines("")
     
+    with open("translate_for_test.txt", "w") as file:
+        file.writelines("")
+
     list_checkboxes()
     list_radio()
 
@@ -294,139 +305,60 @@ def lists_of_testing():
     return len(new_array)
 
 
-# приводит список тестов чекбоксов в состояние пригодное для тестирования
-def checkboxes_translit():
-    array = []
-    edit_letters = []
-
-    with open("checkboxes.txt", "r") as file:
-        for line in file:
-            array.append(line.strip())
-
-    with open("translit.txt", "r") as fl:
-        for ln in fl:
-            edit_letters.append(ln.strip())
-
-    for line in array:
-        translate_line = line
-        for symbol in line:
-
-            for letter in edit_letters:
-                if symbol == letter[0]:
-                    line = line.replace(":", "")
-                    translate_line = translate_line.replace(symbol, letter[2:]).replace(":", "")
-
-        if len(translate_line) != 0:
-            translate_line = translate_line.split("_")[0][0: 3] + "_" + translate_line.split("_")[1]
-            print(f"{translate_line}\t{line}")
-
-            with open("translate_for_test.txt", "a") as file:
-                file.writelines(f"{translate_line}\t{line}")
-                file.write("\n")
-
-
-# приводит список тестов радиобаттонов в состояние пригодное для тестирования
-def radio_translit():
-    array = []
-    edit_letters = []
-
-    with open("radiobuttons.txt", "r") as file:
-        for line in file:
-            array.append(line.rstrip())
-
-    with open("translit.txt", "r") as fl:
-        for ln in fl:
-            edit_letters.append(ln.rstrip())
-
-    for line in array:
-        translate_line = line
-        for symbol in line:
-
-            for letter in edit_letters:
-                if symbol == letter[0]:
-                    translate_line = translate_line.replace(symbol, letter[2:])
-
-        if len(translate_line) != 0:
-            line = line.rstrip(",").replace(":", ",").split("_")[0].split(", ")
-            translate_line = translate_line.rstrip(",").replace(":", ",").split("_")[0].split(", ")
-            print(f"{translate_line}\t{line}")
-            for i in range(1, len(line)):
-                print(f"{translate_line[0]}_{translate_line[i]}\t{line[0]}_{line[i]}")
-            
-                with open("translate_for_test.txt", "a") as file:
-                    file.writelines(f"{translate_line[0]}_{translate_line[i]}\t{line[0]}_{line[i]}")
-                    file.write("\n")
-
-
-# приводит список тестов чекбоксов в состояние пригодное для использования в pairwise pict online
+# приводит список тестов чекбоксов в состояние пригодное для использования в pairwise pict online и для тестирования
 def list_checkboxes():
     array = []
-    edit_letters = []
 
     with open("checkboxes.txt", "r") as file:
         for line in file:
             array.append(line.rstrip())
 
-    with open("translit.txt", "r") as fl:
-        for ln in fl:
-            edit_letters.append(ln.rstrip())
-
     for line in array:
-        translate_line = line
-        for symbol in line:
+        test_line = line
 
-            for letter in edit_letters:
-                if symbol == letter[0]:
-                    line = line.replace(":", "")
-                    translate_line = translate_line.replace(symbol, letter[2:])
-
-        if len(translate_line) != 0:
-            translate_line = translate_line.split("_")[0] + "_" + translate_line.split("_")[2]
-            print(f"{translate_line}\t{line}")
+        if len(test_line) != 0:
+            test_line = test_line.split("_")[0] + "_" + test_line.split("_")[2]
+            line = line.split("_")[1]+"_"+line.split("_")[3]
+            print(f"{test_line}\t{line}")
             
             with open("translate_for_pict.txt", "a") as file:
-                file.writelines(f"{translate_line}: a, i")        # a - active checkbox, i - inactive
+                file.writelines(f"{test_line}: a, i")        # a - active checkbox, i - inactive
                 file.write("\n")
 
             with open("translate_for_test.txt", "a") as file:
-                file.writelines(f"{translate_line}\t{line}")
+                file.writelines(f"{test_line}\t{line}")
                 file.write("\n")
 
 
-# приводит список тестов радиобаттонов в состояние пригодное для использования в pairwise pict online
+# приводит список тестов радиобаттонов в состояние пригодное для использования в pairwise pict online и для тестирования
 def list_radio():
     array = []
-    edit_letters = []
 
     with open("radiobuttons.txt", "r") as file:
-        for line in file:
-            array.append(line.rstrip())
+        for test_line in file:
+            array.append(test_line.rstrip())
 
-    with open("translit.txt", "r") as fl:
-        for ln in fl:
-            edit_letters.append(ln.rstrip())
+    for test_line in array:
+        test_line = test_line
 
-    for line in array:
-        translate_line = line
-        for symbol in line:
+        if len(test_line) != 0:
+            test_line = test_line.replace(":", ",").rstrip(",").split(", ")
 
-            for letter in edit_letters:
-                if symbol == letter[0]:
-                    translate_line = translate_line.replace(symbol, letter[2:]).strip(",")
+            line = ""
+            for i in test_line:
+                line = line + i.split("_")[0] + ", "
+                if i != test_line[0]:
+                    tl = test_line[0].split("_")[0] + "_" + i.split("_")[0] + \
+                        "\t" + test_line[0].split("_")[1] + "_" + i.split("_")[1]
+                    print(tl)
+                    
+                    with open("translate_for_test.txt", "a") as file:
+                        file.writelines(f"{tl}")
+                        file.write("\n")
 
-        if len(translate_line) != 0:
-            print(f"{translate_line}")
+            line = line.rstrip(", ").replace(",", ":", 1)
+            print(line)
 
             with open("translate_for_pict.txt", "a") as file:
-                file.writelines(f"{translate_line}")
+                file.writelines(f"{line}")
                 file.write("\n")
-
-            line = line.rstrip(",").replace(":", ",").split("_")[0].split(", ")
-            translate_line = translate_line.rstrip(",").replace(":", ",").split("_")[0].split(", ")
-            print(f"{translate_line}\t{line}")
-            for i in range(1, len(line)):
-                print(f"{translate_line[0]}_{translate_line[i]}\t{line[0]}_{line[i]}")
-            
-                with open("translate_for_test.txt", "a") as file:
-                    file.writelines(f"{translate_line[0]}_{translate_line[i]}\t{line[0]}_{line[i]}")
-                    file.write("\n")

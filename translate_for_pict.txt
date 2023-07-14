@@ -164,5 +164,5 @@
 8_25: a, i
 8_26: a, i
 8_27: a, i
-Srok dostavki: Lyuboy, 1 den", 2 dnya, do 3 dney, do 5 dney
-Skidka: Lyubaya, ot 10` i vyshe, ot 30` i vyshe, ot 50` i vyshe, ot 70` i vyshe
+9: 1, 2, 3, 4, 5
+10: 1, 2, 3, 4, 5
