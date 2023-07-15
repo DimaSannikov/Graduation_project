@@ -63,6 +63,7 @@ def count_goods(browser):
 # добавить фильтр по признаку принадлежности к чекбоксу в список для тестирования
 def checkbox_filter_adding(browser):
     elements = browser.find_elements(By.CLASS_NAME, "filters-desktop__item--type-1")
+    
     with open("checkboxes.txt", "w") as file:
         file.writelines("")
 
@@ -83,6 +84,7 @@ def checkbox_filter_adding(browser):
             with open("checkboxes.txt", "a") as file:
                 file.writelines(f"{count_list_name}_{filter_name}_{count_filter_name}_{parent_text}: ")
                 file.write("\n")
+            
             count_filter_name += 1
             print(f"{count_list_name}_{filter_name}_{count_filter_name}_{parent_text}")
         count_list_name += 1
@@ -97,6 +99,7 @@ def checkbox_filter_adding(browser):
 def radio_filter_adding(browser, count_list_name):
     elements = browser.find_elements(
         By.CLASS_NAME, "filters-desktop__item--type-7")
+    
     with open("radiobuttons.txt", "w") as file:
         file.writelines("")
     
@@ -107,7 +110,7 @@ def radio_filter_adding(browser, count_list_name):
         
         with open("radiobuttons.txt", "a") as file:
             file.writelines(f"{count_list_name}_{filter_name}: ")
-
+        
         print(f"{count_list_name}_{filter_name}")
         
         count_filter_name = 1
@@ -115,8 +118,9 @@ def radio_filter_adding(browser, count_list_name):
             radiobutton = filter_list[i].find_elements(By.TAG_NAME, "span")[1]
 
             with open(f"radiobuttons.txt", "a") as file:
-                file.writelines(f"{count_filter_name}_{radiobutton.text}, ")
-            print(f"{count_filter_name}_{radiobutton.text}, ")
+                file.writelines(f"{count_list_name}x{count_filter_name}_{radiobutton.text}, ")
+            
+            print(f"{count_list_name}x{count_filter_name}_{radiobutton.text}, ")
             count_filter_name += 1
 
         with open(f"radiobuttons.txt", "a") as file:
