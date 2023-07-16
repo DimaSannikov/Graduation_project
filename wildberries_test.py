@@ -109,9 +109,9 @@ def radio_filter_adding(browser, count_list_name):
         filter_name = element.find_element(By.TAG_NAME, "h3").text
         
         with open("radiobuttons.txt", "a") as file:
-            file.writelines(f"{count_list_name}_{filter_name}: ")
+            file.writelines(f"{count_list_name}R_{filter_name}: ")
         
-        print(f"{count_list_name}_{filter_name}")
+        print(f"{count_list_name}R_{filter_name}")
         
         count_filter_name = 1
         for i in range(0, len(filter_list)):
@@ -202,7 +202,7 @@ def radio_choose(browser, list):
             for name in list:
                 if name[1] == radio_name:
                     radio[0].click()
-                    print(f"{radio_name} = {name[1]}, {name[0]}")
+                    print(f"{radio_name} = {name[1]}")
 
 
 # кнопка "Показать" в модальном окне
@@ -239,7 +239,7 @@ def translated_list():
 
     with open("translate_for_test.txt", "r") as file:
         for line in file:
-            line = line.replace("\n", "")
+            line = line.replace("\n", "").replace(":", "")
             line = line.split("\t")
             translate.append(line)
 
