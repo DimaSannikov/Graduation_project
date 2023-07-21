@@ -27,7 +27,7 @@ try:
     count = wb.lists_of_testing()
     
     # for num in range(1, count + 1):
-    for num in range(1, 3):
+    for num in range(1, 2):
 
         print(f"Тест {num} из {count-1}")
         wb.cookies_upload(browser, url)
