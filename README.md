@@ -6,6 +6,6 @@
 4. Скопировать содержимое файла __translate_for_pict.txt__ в область ввода test factors сайта Pairwise Pict Online
 5. Сохранить результаты генерации попарных тестов сайта Pairwise Pict Online как файл __pairwise.txt__ в директорию файла main_WB.py
 6. Запустить __testing_lists.py__
-7. Запустить __main_WB.py__
+7. Запустить __checkboxes_test.py__
 
 Все файлы __.txt__ должны находиться в одной директории с файлом __main_WB.py__, так же как и все файлы __.py__, за исключением файлов **ready_for_test_[].txt** под которые создана отдельная папка.
