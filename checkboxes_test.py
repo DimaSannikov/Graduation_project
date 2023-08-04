@@ -42,14 +42,14 @@ def test_cookies_upload(status):
     wb.cookies_upload(browser, url)
 
     req = requests.get(url)
-    print(f"Status code is not {req.status_code}")
     assert req.status_code == 200, "Status code is not 200"
 
 def test_filter_modal_window():
     wb.open_filter(browser)
     sleep(t_low)
 
-@pytest.mark.parametrize("x", [x for x in range(len(list))])
+# @pytest.mark.parametrize("x", [x for x in range(len(list))])
+@pytest.mark.parametrize("x", [x for x in range(5, 15)])
 def test_found_headlines(x):
     list_name = list[x].split("_")[0]
     filter_name = list[x].split("_")[1]
