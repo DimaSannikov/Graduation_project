@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from time import sleep
 
 
-test_num = 1
+test_num = 4
 list = []
 
 t_micro = 0.25
@@ -73,11 +73,11 @@ def test_found_headlines(x):
                     if link_name == filter_name:
                         link.click()
                         sleep(t_micro)
-                        print(f"\033[1mCheckbox {filter_name} has been selected!\033[0m")
+                        print(f"\033[1mCheckbox '{element.text}--{filter_name}' has been selected!\033[0m")
             else:
                 try:
                     link.is_displayed()
                 except UnboundLocalError as ULE:
                     sleep(t_micro)
-                    print(f"\033[31m\033[1mCheckbox\033[0m \033[1m'{filter_name}'\033[31m is not available!\033[0m")
+                    print(f"\033[31m\033[1mCheckbox\033[0m \033[1m'{element.text}--{filter_name}'\033[31m is not available!\033[0m")
                     # assert ULE == False, f"Checkbox is not available!"
