@@ -25,11 +25,15 @@ with open(f"testlists/ready_for_test_{test_num}.txt", "r") as file:
 
 
 option = webdriver.ChromeOptions()
+# option = webdriver.FirefoxOptions()
 option.add_argument("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36")
+# option.add_argument("Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0")
 option.add_argument('--disable-blink-features=AutomationControlled')
+# option.add_argument("general.useragent.override")
 
 browser = webdriver.Chrome(options=option)
+# browser = webdriver.Firefox(options=option)
 browser.maximize_window()
 
 
@@ -81,3 +85,6 @@ def test_found_headlines(x):
                     sleep(t_micro)
                     print(f"\033[31m\033[1mCheckbox\033[0m \033[1m'{element.text}--{filter_name}'\033[31m is not available!\033[0m")
                     # assert ULE == False, f"Checkbox is not available!"
+
+
+browser.quit
